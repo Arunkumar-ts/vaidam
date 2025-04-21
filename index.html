@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaidam Consultancy | Support Solution For Every Business</title>
+    <!-- Boostrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap" rel="stylesheet">
+    <!-- Font awessome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Special Gothic", sans-serif;
+        }
+        /* navbar */
+        .navLinks {
+            justify-content: center;
+            align-items: center;
+        }
+        .navLinks > ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+        }
+        .navLinks > ul > li {
+            margin: 20px 0px 0px 20px;
+            font-weight: 500;
+            font-size: 18px;
+        }
+        .navLinks > ul > li > a {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .navLinks > ul > li > a:hover {
+            color: blue;
+        }
+        /* services */
+        .services{
+            position: relative;
+        }
+        .servicesList > ul {
+            list-style: none;
+        }
+        .servicesList-title{
+            font-weight: 600;
+            font-size: 20px;
+        }
+        .servicesList-viewMore {
+            text-decoration: none;
+            color: rgb(253, 126, 79);
+            font-weight: 600;
+            font-size: 13px;
+        }
+        .servicesList-role a{
+            color: rgb(255, 145, 0);
+            font-size: 18px;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+        .servicesList-role a:hover{
+            transform: translateX(10px);
+            transition: all .3s linear;
+            color: blue;
+        }
+        .servicesList-viewMoreTop{
+            border-top: 1px dashed #ccc;
+            margin-bottom: 10px;
+        }
+        .crossIcon{
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            padding: 5px 7px;
+            border-radius: 50%;
+        }
+        .crossIcon:hover{
+            background-color: #ebe6e6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar container-fluid shadow">
+
+        <div class="container">
+
+            <img src="./assets/images/vaidam/logo1.png" alt="vaidam logo" class="img-fluid" width="170">
+
+            <div class="d-none d-md-flex navLinks ">
+
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a class="dropdown-toggle" onclick="servicesToggeleOn()">Services</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+
+            </div>
+            
+            <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end w-75" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+                <div class="offcanvas-header bg-body-tertiary">
+                    <div class="offcanvas-title" id="offcanvasNavbarLabel" >
+                        <img src="./assets/images/vaidam/logo.png" alt="vaidam logo" class="img-fluid" width="140">
+                    </div>
+                    <button type="button" class="btn-close me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                        <li class="nav-item">
+                            <a class="nav-link text-black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-black dropdown-toggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" onclick="servicesToggeleOn()">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >About Us</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >Blog</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >Contact Us</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+                    
+        </div>
+        
+    </nav>
+    <!-- Services -->
+    <div class="container bg-white shadow rounded services ">
+
+        <div class="row pb-3">
+
+            <div class="col col-12 col-md m-3 mb-0 px-5 px-md-2 servicesList">
+
+                <div class="servicesList-title">Business Setup</div>
+                <hr>
+                
+                <div class="d-inline-flex servicesList-role d-flex flex-column">
+                    <a href="">Business Registration</a>
+                    <a href="">Sole Proprietorship</a>
+                    <a href="">Partnership Firm</a>
+                </div>
+                
+                <div class="collapse" id="collapseExample1">
+                    <div class="servicesList-role d-flex flex-column">
+                        <a href="">Pvt Ltd Company</a>
+                        <a href="">Public  Limited</a>
+                        <a href="">OPC Registration</a>
+                        <a href="">LLP Registration</a>
+                        <a href="">Startup Registration</a>
+                        <a href="">Nidhi Company</a>
+                    </div>
+                </div>
+
+                <div class="servicesList-viewMoreTop">
+                    <a class="servicesList-viewMore" data-bs-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample" role="button">
+                        View More +
+                    </a>
+                </div>
+
+                <div class="d-inline-flex servicesList-role d-flex flex-column">
+                    <a href="">Business Setup</a>
+                    <a href="">Udaya Registration</a>
+                    <a href="">GST Registration</a>
+                </div>
+                
+                <div class="collapse" id="collapseExample1.1">
+                    <div class="servicesList-role d-flex flex-column">
+                        <a href="">Professional Tax</a>
+                    </div>
+                </div>
+
+                <div class="servicesList-viewMoreTop">
+                    <a class="servicesList-viewMore" data-bs-toggle="collapse" href="#collapseExample1.1" aria-expanded="false" aria-controls="collapseExample" role="button">
+                        View More +
+                    </a>
+                </div>
+                    
+            </div>
+
+            <div class="col col-12 col-md m-3 mb-0 px-5 px-md-2">
+
+                <div class="servicesList-title">Compliances</div>
+                <hr>
+
+                <div class="d-inline-flex servicesList-role d-flex flex-column">
+                    <a href="">Secretarial Compliances</a>
+                    <a href="">Auditor Appointment</a>
+                    <a href="">Director Disqualification</a>
+                </div>
+
+                <div class="collapse" id="collapseExample2">
+                    <div class="servicesList-role d-flex flex-column">
+                        <a href="">Annual Return</a>
+                        <a href="">LLP Compliance</a>
+                        <a href="">Trust Compliance</a>
+                        <a href="">15CA 15CB Filing</a>
+                        <a href="">Form FC TRS</a>
+                        <a href="">LLP Form 11</a>
+                        <a href="">LLP Form 4</a>
+                        <a href="">LLP Form 8</a>
+                        <a href="">LLP Form 3</a>
+                        
+                    </div>
+                </div>
+
+                <div class="servicesList-viewMoreTop">
+                    <a class="servicesList-viewMore" data-bs-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample" role="button">
+                        View More +
+                    </a>
+                </div>
+                    
+            </div>
+
+            <div class="col col-12 col-md m-3 mb-0 px-5 px-md-2">
+                <div class="servicesList-title">Licenses</div>
+                <hr>
+
+                <div class="d-inline-flex servicesList-role d-flex flex-column">
+                    <a href="">FSSAI</a>
+                    <a href="">FSSAI Registration/a>
+                    <a href="">FSSAI State</a>
+                </div>
+
+                <div class="collapse" id="collapseExample3">
+                    <div class="servicesList-role d-flex flex-column">
+                        <a href="">FSSAI Cental</a>
+                        <a href="">FSSAI Renewable</a>
+                        <a href="">FSSAI Annual Return</a>
+                    </div>
+                </div>
+
+                <div class="servicesList-viewMoreTop">
+                    <a class="servicesList-viewMore" data-bs-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample" role="button">
+                        View More +
+                    </a>
+                </div>
+                    
+                <div class="servicesList-title">Tax</div>
+                <hr>
+
+                <div class="d-inline-flex servicesList-role d-flex flex-column">
+                    <a href="">TDA</a>
+                    <a href="">TDA on Dividend</a>
+                    <a href="">TDA on Salary</a>
+                </div>
+
+                <div class="collapse" id="collapseExample3.1">
+                    <div class="servicesList-role d-flex flex-column">
+                        <a href="">TDA Return Filling</a>
+                    </div>
+                </div>
+
+                <div class="servicesList-viewMoreTop">
+                    <a class="servicesList-viewMore" data-bs-toggle="collapse" href="#collapseExample3.1" aria-expanded="false" aria-controls="collapseExample" role="button">
+                        View More +
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="col col-12 col-md m-3 mb-0 px-5 px-md-2">
+                <div class="servicesList-title">Certificates</div>
+                <hr>
+
+                <div class="d-inline-flex servicesList-role d-flex flex-column">
+                    <a href="">Government</a>
+                    <a href="">Make In India</a>
+                    <a href="">GeM Registration</a>
+                </div>
+
+                <div class="collapse" id="collapseExample4">
+                    <div class="servicesList-role d-flex flex-column">
+                        <a href="">Make In Indian Services</a>
+                        <a href="">EPR Registration</a>
+                    </div>
+                </div>
+
+                <div class="servicesList-viewMoreTop">
+                    <a class="servicesList-viewMore" data-bs-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample" role="button">
+                        View More +
+                    </a>
+                </div>
+                    
+            </div>
+
+        </div>
+
+        <div class="crossIcon" onclick="servicesToggeleOff()" >
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+    </div>
+                                   
+</body>
+<script>
+
+// servicesToggele
+    var servicesToggele=false;
+    if(!servicesToggele){
+        document.querySelector(".services").style.display="none";
+    }
+
+    function servicesToggeleOn(){
+        servicesToggele=true;
+        servicesToggeleFunction();
+    }
+    function servicesToggeleOff(){
+        servicesToggele=false;
+        servicesToggeleFunction();
+    }
+    function servicesToggeleFunction(){
+        if(servicesToggele){
+            document.querySelector(".services").style.display="block";
+        }
+        else{
+            document.querySelector(".services").style.display="none";
+        }
+    }
+
+
+</script>
+</html>
