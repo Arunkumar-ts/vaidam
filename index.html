@@ -20,7 +20,13 @@
             box-sizing: border-box;
             font-family: "Special Gothic", sans-serif;
         }
+        .body{
+            position: relative;
+        }
         /* navbar */
+        .navbar-toggler{
+            box-shadow: none !important;
+        }
         .navLinks {
             justify-content: center;
             align-items: center;
@@ -80,82 +86,143 @@
             position: absolute;
             right: 20px;
             top: 10px;
-            padding: 5px 7px;
+            padding: 5px 8px;
             border-radius: 50%;
         }
         .crossIcon:hover{
-            background-color: #ebe6e6;
+            background-color: #f3efef;
+        }
+        /* home */
+        .home-title{
+            font-size: 40px;
+            font-weight: 700;
+            color: rgb(0, 91, 150);
+            @media (max-width:500px) {
+                font-size: 30px;
+            }
+        }
+        .home-title-bar{
+            background-color:rgb(0, 91, 150);
+            border-radius: 5px;
+            width: 20%;
+            height: 7px;
+            margin: 10px 0px;
+        }
+        .home-title-slo{
+            font-style: italic;
+            font-size: 20px;
+            color: rgb(0, 91, 150);
+        }
+        .home-btn-logo{
+            cursor: pointer;
+            padding: 5px 10px ;
+            background-color: transparent;
+            border: 1px solid rgb(0, 91, 150);
+            border-radius: 20px;
+            margin-top: 20px;
+            color:rgb(0, 91, 150);
+            font-weight: 600;
+            font-size: 18px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        .home-btn-logo:hover{
+            color: white;
+            background-color: rgb(4, 146, 202);
+        }
+        /* ourservices */
+        .ourServices-title{
+            color: rgb(2, 173, 173);
+            font-size: 30px;
+            font-weight: 600;
+        }
+        .ourServices-title > div{
+            background-color:rgb(41, 196, 196);
+            border-radius: 5px;
+            width: 30%;
+            height: 7px;
+            margin: auto;
+        }
+        /* go to Top */
+        .goToTOP{
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 10px 13px;
+            border-radius: 50%;
+            background-color: rgba(255, 69, 0, 0.6);
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar container-fluid shadow">
+    <div class="body">
+        <!-- Navbar -->
+        <nav class="navbar container-fluid shadow" id="navbar">
 
-        <div class="container">
+            <div class="container">
 
-            <img src="./assets/images/vaidam/logo1.png" alt="vaidam logo" class="img-fluid" width="170">
+                <img src="./assets/images/vaidam/logo1.png" alt="vaidam logo" class="img-fluid" width="170">
 
-            <div class="d-none d-md-flex navLinks ">
+                <div class="d-none d-md-flex navLinks ">
 
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a class="dropdown-toggle" onclick="servicesToggeleOn()">Services</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Contact Us</a></li>
-                </ul>
-
-            </div>
-            
-            <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="offcanvas offcanvas-end w-75" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-
-                <div class="offcanvas-header bg-body-tertiary">
-                    <div class="offcanvas-title" id="offcanvasNavbarLabel" >
-                        <img src="./assets/images/vaidam/logo.png" alt="vaidam logo" class="img-fluid" width="140">
-                    </div>
-                    <button type="button" class="btn-close me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-
-                <div class="offcanvas-body">
-
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-
-                        <li class="nav-item">
-                            <a class="nav-link text-black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >Home</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-black dropdown-toggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" onclick="servicesToggeleOn()">Services</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >About Us</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >Blog</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >Contact Us</a>
-                        </li>
-
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a class="dropdown-toggle" onclick="servicesToggeleOn()">Services</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Contact Us</a></li>
                     </ul>
 
                 </div>
+                
+                <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
+                <div class="offcanvas offcanvas-end w-75" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+                    <div class="offcanvas-header bg-body-tertiary">
+                        <div class="offcanvas-title" id="offcanvasNavbarLabel" >
+                            <img src="./assets/images/vaidam/logo.png" alt="vaidam logo" class="img-fluid" width="140">
+                        </div>
+                        <button type="button" class="btn-close me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                            <li class="nav-item">
+                                <a class="nav-link text-black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >Home</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-black dropdown-toggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" onclick="servicesToggeleOn()">Services</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >About Us</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >Blog</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >Contact Us</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+                        
             </div>
-                    
-        </div>
-        
-    </nav>
-    <!-- Services -->
-    <div class="container bg-white shadow rounded services ">
+            
+        </nav>
+        <!-- Services -->
+        <div class="container bg-white shadow rounded services ">
 
         <div class="row pb-3">
 
@@ -182,7 +249,7 @@
                 </div>
 
                 <div class="servicesList-viewMoreTop">
-                    <a class="servicesList-viewMore" data-bs-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample" role="button">
+                    <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample" role="button">
                         View More +
                     </a>
                 </div>
@@ -200,7 +267,7 @@
                 </div>
 
                 <div class="servicesList-viewMoreTop">
-                    <a class="servicesList-viewMore" data-bs-toggle="collapse" href="#collapseExample1.1" aria-expanded="false" aria-controls="collapseExample" role="button">
+                    <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample1.1" aria-expanded="false" aria-controls="collapseExample" role="button">
                         View More +
                     </a>
                 </div>
@@ -234,7 +301,7 @@
                 </div>
 
                 <div class="servicesList-viewMoreTop">
-                    <a class="servicesList-viewMore" data-bs-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample" role="button">
+                    <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample" role="button">
                         View More +
                     </a>
                 </div>
@@ -247,7 +314,7 @@
 
                 <div class="d-inline-flex servicesList-role d-flex flex-column">
                     <a href="">FSSAI</a>
-                    <a href="">FSSAI Registration/a>
+                    <a href="">FSSAI Registration</a>
                     <a href="">FSSAI State</a>
                 </div>
 
@@ -260,7 +327,7 @@
                 </div>
 
                 <div class="servicesList-viewMoreTop">
-                    <a class="servicesList-viewMore" data-bs-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample" role="button">
+                    <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample" role="button">
                         View More +
                     </a>
                 </div>
@@ -281,7 +348,7 @@
                 </div>
 
                 <div class="servicesList-viewMoreTop">
-                    <a class="servicesList-viewMore" data-bs-toggle="collapse" href="#collapseExample3.1" aria-expanded="false" aria-controls="collapseExample" role="button">
+                    <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample3.1" aria-expanded="false" aria-controls="collapseExample" role="button">
                         View More +
                     </a>
                 </div>
@@ -306,7 +373,7 @@
                 </div>
 
                 <div class="servicesList-viewMoreTop">
-                    <a class="servicesList-viewMore" data-bs-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample" role="button">
+                    <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample" role="button">
                         View More +
                     </a>
                 </div>
@@ -319,7 +386,78 @@
             <i class="fa-solid fa-xmark"></i>
         </div>
 
+        </div>
+        <!-- Home -->
+        <div class="container pt-4">
+            <div class="row">
+
+                <div class="col-12 col-md mb-4 ">
+                    <div class="home-title">Support Solution For</div>
+                    <div class="home-title">Every Business</div>
+                    <div class="home-title-bar"></div>
+                    <div class="home-title-slo">
+                        <div>Strategic Focus, Measurable</div>
+                    </div>
+                    <div class="home-title-slo">
+                        <div>Results</div>
+                    </div>
+                    <button class="home-btn-logo">Get Started 
+                        <span><img src="./assets/images/vaidam/home-btn-logo.svg" alt="home-btn-logo" width="20"></span>
+                    </button>
+                </div>
+
+                <div class="col-12 col-md d-flex align-items-center">
+                    <img src="./assets/images/vaidam/home-vaidam-img.jpg" alt="home-vaidam-img" class="img-fluid shadow" width="400">
+                </div>
+
+            </div>
+        </div>
+        <!-- Our Services -->
+         <div class="container pt-3 mt-5">
+
+            <div class="d-flex  align-items-center flex-column">
+                <div class="ourServices-title">Our Services <div></div></div>
+            </div>
+
+            <!-- Nav tabs -->
+            <!-- <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu1">Menu 1</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu2">Menu 2</a>
+                </li>
+            </ul> -->
+
+            <!-- Tab panes -->
+            <!-- <div class="tab-content">
+                <div id="home" class="container tab-pane active"><br>
+                <h3>HOME</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div id="menu1" class="container tab-pane fade"><br>
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div id="menu2" class="container tab-pane fade"><br>
+                <h3>Menu 2</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                </div>
+            </div>
+            </div> -->
+
+         </div>
+        <!-- Go to Top -->
+        <div class="goToTOP">
+            <a href="#navbar" class="text-white">
+                <i class="fa-solid fa-up-long"></i>
+            </a>
+        </div>
     </div>
+    
                                    
 </body>
 <script>
@@ -329,9 +467,8 @@
     if(!servicesToggele){
         document.querySelector(".services").style.display="none";
     }
-
     function servicesToggeleOn(){
-        servicesToggele=true;
+        servicesToggele=!servicesToggele;
         servicesToggeleFunction();
     }
     function servicesToggeleOff(){
@@ -347,6 +484,17 @@
         }
     }
 
+// viewToggle
+    var viewToggele=true;
+    function viewToggle(event){
+        if(viewToggele){
+            event.target.textContent="View Less -";
+        }
+        else{
+            event.target.textContent="View More +";
+        }
+        viewToggele=!viewToggele;
+    }
 
 </script>
 </html>
