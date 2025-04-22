@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaidam Consultancy | Support Solution For Every Business</title>
+    
     <!-- Boostrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap" rel="stylesheet">
+    
     <!-- Font awessome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
     <style>
         * {
             margin: 0px;
@@ -23,7 +27,14 @@
         .body{
             position: relative;
         }
+    
         /* navbar */
+        .navbar{
+            position: sticky;
+            top: 0px;
+            z-index: 100;
+            background-color: white;
+        }
         .navbar-toggler{
             box-shadow: none !important;
         }
@@ -46,13 +57,16 @@
             color: black;
             text-decoration: none;
             cursor: pointer;
+            transition: all .2s linear;
         }
         .navLinks > ul > li > a:hover {
             color: blue;
         }
+    
         /* services */
         .services{
             position: relative;
+            z-index: 50;
         }
         .servicesList > ul {
             list-style: none;
@@ -92,14 +106,12 @@
         .crossIcon:hover{
             background-color: #f3efef;
         }
+    
         /* home */
         .home-title{
             font-size: 40px;
             font-weight: 700;
             color: rgb(0, 91, 150);
-            @media (max-width:500px) {
-                font-size: 30px;
-            }
         }
         .home-title-bar{
             background-color:rgb(0, 91, 150);
@@ -120,15 +132,18 @@
             border: 1px solid rgb(0, 91, 150);
             border-radius: 20px;
             margin-top: 20px;
+            margin-bottom: 10px;
             color:rgb(0, 91, 150);
             font-weight: 600;
             font-size: 18px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            transition: all .3s linear;
         }
         .home-btn-logo:hover{
             color: white;
             background-color: rgb(4, 146, 202);
         }
+    
         /* ourservices */
         .ourServices-title{
             color: rgb(2, 173, 173);
@@ -142,6 +157,35 @@
             height: 7px;
             margin: auto;
         }
+        .our-service-list{
+            width: 100%;
+            background-color: rgb(6, 115, 204);
+            color: white;
+            padding: 25px 20px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 22px;
+            border-bottom: 1px solid white;
+            transition: all .3s linear;
+        }
+        .our-service-list>span{
+            padding: 3px 5px 7px 10px;
+            margin: 5px;
+            border-radius: 50%;
+            background-color: #1e6575;   
+        }
+        .our-service-list>span>img{
+            fill: black;
+        }
+        .our-service-list.active>span{
+            color:white !important;
+            background-color: #1a73e8;
+        }
+        .our-service-list.active{
+            color:  rgb(2, 124, 173);
+            background-color: #e8f0fe;
+        }
+    
         /* go to Top */
         .goToTOP{
             position: fixed;
@@ -155,11 +199,12 @@
     </style>
 </head>
 <body>
-    <div class="body">
+    <div class="body" id="toTop">
         <!-- Navbar -->
-        <nav class="navbar container-fluid shadow" id="navbar">
+        <nav class="navbar container-fluid p-0 shadow" id="navbar">
 
-            <div class="container">
+            <!-- Nav -->
+            <div class="container  ">
 
                 <img src="./assets/images/vaidam/logo1.png" alt="vaidam logo" class="img-fluid" width="170">
 
@@ -219,176 +264,178 @@
                 </div>
                         
             </div>
-            
-        </nav>
-        <!-- Services -->
-        <div class="container bg-white shadow rounded services ">
+             
+            <!-- Services -->
+            <div class="container bg-white shadow rounded services">
 
-        <div class="row pb-3">
+                <div class="row pb-3">
 
-            <div class="col col-12 col-md m-3 mb-0 px-5 px-md-2 servicesList">
+                    <div class="col col-12 col-md m-3 mb-0 px-5 px-md-2 servicesList">
 
-                <div class="servicesList-title">Business Setup</div>
-                <hr>
-                
-                <div class="d-inline-flex servicesList-role d-flex flex-column">
-                    <a href="">Business Registration</a>
-                    <a href="">Sole Proprietorship</a>
-                    <a href="">Partnership Firm</a>
-                </div>
-                
-                <div class="collapse" id="collapseExample1">
-                    <div class="servicesList-role d-flex flex-column">
-                        <a href="">Pvt Ltd Company</a>
-                        <a href="">Public  Limited</a>
-                        <a href="">OPC Registration</a>
-                        <a href="">LLP Registration</a>
-                        <a href="">Startup Registration</a>
-                        <a href="">Nidhi Company</a>
-                    </div>
-                </div>
-
-                <div class="servicesList-viewMoreTop">
-                    <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample" role="button">
-                        View More +
-                    </a>
-                </div>
-
-                <div class="d-inline-flex servicesList-role d-flex flex-column">
-                    <a href="">Business Setup</a>
-                    <a href="">Udaya Registration</a>
-                    <a href="">GST Registration</a>
-                </div>
-                
-                <div class="collapse" id="collapseExample1.1">
-                    <div class="servicesList-role d-flex flex-column">
-                        <a href="">Professional Tax</a>
-                    </div>
-                </div>
-
-                <div class="servicesList-viewMoreTop">
-                    <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample1.1" aria-expanded="false" aria-controls="collapseExample" role="button">
-                        View More +
-                    </a>
-                </div>
-                    
-            </div>
-
-            <div class="col col-12 col-md m-3 mb-0 px-5 px-md-2">
-
-                <div class="servicesList-title">Compliances</div>
-                <hr>
-
-                <div class="d-inline-flex servicesList-role d-flex flex-column">
-                    <a href="">Secretarial Compliances</a>
-                    <a href="">Auditor Appointment</a>
-                    <a href="">Director Disqualification</a>
-                </div>
-
-                <div class="collapse" id="collapseExample2">
-                    <div class="servicesList-role d-flex flex-column">
-                        <a href="">Annual Return</a>
-                        <a href="">LLP Compliance</a>
-                        <a href="">Trust Compliance</a>
-                        <a href="">15CA 15CB Filing</a>
-                        <a href="">Form FC TRS</a>
-                        <a href="">LLP Form 11</a>
-                        <a href="">LLP Form 4</a>
-                        <a href="">LLP Form 8</a>
-                        <a href="">LLP Form 3</a>
+                        <div class="servicesList-title">Business Setup</div>
+                        <hr>
                         
+                        <div class="d-inline-flex servicesList-role d-flex flex-column">
+                            <a href="">Business Registration</a>
+                            <a href="">Sole Proprietorship</a>
+                            <a href="">Partnership Firm</a>
+                        </div>
+                        
+                        <div class="collapse" id="collapseExample1">
+                            <div class="servicesList-role d-flex flex-column">
+                                <a href="">Pvt Ltd Company</a>
+                                <a href="">Public  Limited</a>
+                                <a href="">OPC Registration</a>
+                                <a href="">LLP Registration</a>
+                                <a href="">Startup Registration</a>
+                                <a href="">Nidhi Company</a>
+                            </div>
+                        </div>
+
+                        <div class="servicesList-viewMoreTop">
+                            <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample" role="button">
+                                View More +
+                            </a>
+                        </div>
+
+                        <div class="d-inline-flex servicesList-role d-flex flex-column">
+                            <a href="">Business Setup</a>
+                            <a href="">Udaya Registration</a>
+                            <a href="">GST Registration</a>
+                        </div>
+                        
+                        <div class="collapse" id="collapseExample1.1">
+                            <div class="servicesList-role d-flex flex-column">
+                                <a href="">Professional Tax</a>
+                            </div>
+                        </div>
+
+                        <div class="servicesList-viewMoreTop">
+                            <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample1.1" aria-expanded="false" aria-controls="collapseExample" role="button">
+                                View More +
+                            </a>
+                        </div>
+                            
                     </div>
+
+                    <div class="col col-12 col-md m-3 mb-0 px-5 px-md-2">
+
+                        <div class="servicesList-title">Compliances</div>
+                        <hr>
+
+                        <div class="d-inline-flex servicesList-role d-flex flex-column">
+                            <a href="">Secretarial Compliances</a>
+                            <a href="">Auditor Appointment</a>
+                            <a href="">Director Disqualification</a>
+                        </div>
+
+                        <div class="collapse" id="collapseExample2">
+                            <div class="servicesList-role d-flex flex-column">
+                                <a href="">Annual Return</a>
+                                <a href="">LLP Compliance</a>
+                                <a href="">Trust Compliance</a>
+                                <a href="">15CA 15CB Filing</a>
+                                <a href="">Form FC TRS</a>
+                                <a href="">LLP Form 11</a>
+                                <a href="">LLP Form 4</a>
+                                <a href="">LLP Form 8</a>
+                                <a href="">LLP Form 3</a>
+                                
+                            </div>
+                        </div>
+
+                        <div class="servicesList-viewMoreTop">
+                            <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample" role="button">
+                                View More +
+                            </a>
+                        </div>
+                            
+                    </div>
+
+                    <div class="col col-12 col-md m-3 mb-0 px-5 px-md-2">
+                        <div class="servicesList-title">Licenses</div>
+                        <hr>
+
+                        <div class="d-inline-flex servicesList-role d-flex flex-column">
+                            <a href="">FSSAI</a>
+                            <a href="">FSSAI Registration</a>
+                            <a href="">FSSAI State</a>
+                        </div>
+
+                        <div class="collapse" id="collapseExample3">
+                            <div class="servicesList-role d-flex flex-column">
+                                <a href="">FSSAI Cental</a>
+                                <a href="">FSSAI Renewable</a>
+                                <a href="">FSSAI Annual Return</a>
+                            </div>
+                        </div>
+
+                        <div class="servicesList-viewMoreTop">
+                            <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample" role="button">
+                                View More +
+                            </a>
+                        </div>
+                            
+                        <div class="servicesList-title">Tax</div>
+                        <hr>
+
+                        <div class="d-inline-flex servicesList-role d-flex flex-column">
+                            <a href="">TDA</a>
+                            <a href="">TDA on Dividend</a>
+                            <a href="">TDA on Salary</a>
+                        </div>
+
+                        <div class="collapse" id="collapseExample3.1">
+                            <div class="servicesList-role d-flex flex-column">
+                                <a href="">TDA Return Filling</a>
+                            </div>
+                        </div>
+
+                        <div class="servicesList-viewMoreTop">
+                            <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample3.1" aria-expanded="false" aria-controls="collapseExample" role="button">
+                                View More +
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="col col-12 col-md m-3 mb-0 px-5 px-md-2">
+                        <div class="servicesList-title">Certificates</div>
+                        <hr>
+
+                        <div class="d-inline-flex servicesList-role d-flex flex-column">
+                            <a href="">Government</a>
+                            <a href="">Make In India</a>
+                            <a href="">GeM Registration</a>
+                        </div>
+
+                        <div class="collapse" id="collapseExample4">
+                            <div class="servicesList-role d-flex flex-column">
+                                <a href="">Make In Indian Services</a>
+                                <a href="">EPR Registration</a>
+                            </div>
+                        </div>
+
+                        <div class="servicesList-viewMoreTop">
+                            <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample" role="button">
+                                View More +
+                            </a>
+                        </div>
+                            
+                    </div>
+
                 </div>
 
-                <div class="servicesList-viewMoreTop">
-                    <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample" role="button">
-                        View More +
-                    </a>
+                <div class="crossIcon" onclick="servicesToggeleOff()" >
+                    <i class="fa-solid fa-xmark"></i>
                 </div>
-                    
+
             </div>
 
-            <div class="col col-12 col-md m-3 mb-0 px-5 px-md-2">
-                <div class="servicesList-title">Licenses</div>
-                <hr>
-
-                <div class="d-inline-flex servicesList-role d-flex flex-column">
-                    <a href="">FSSAI</a>
-                    <a href="">FSSAI Registration</a>
-                    <a href="">FSSAI State</a>
-                </div>
-
-                <div class="collapse" id="collapseExample3">
-                    <div class="servicesList-role d-flex flex-column">
-                        <a href="">FSSAI Cental</a>
-                        <a href="">FSSAI Renewable</a>
-                        <a href="">FSSAI Annual Return</a>
-                    </div>
-                </div>
-
-                <div class="servicesList-viewMoreTop">
-                    <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample" role="button">
-                        View More +
-                    </a>
-                </div>
-                    
-                <div class="servicesList-title">Tax</div>
-                <hr>
-
-                <div class="d-inline-flex servicesList-role d-flex flex-column">
-                    <a href="">TDA</a>
-                    <a href="">TDA on Dividend</a>
-                    <a href="">TDA on Salary</a>
-                </div>
-
-                <div class="collapse" id="collapseExample3.1">
-                    <div class="servicesList-role d-flex flex-column">
-                        <a href="">TDA Return Filling</a>
-                    </div>
-                </div>
-
-                <div class="servicesList-viewMoreTop">
-                    <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample3.1" aria-expanded="false" aria-controls="collapseExample" role="button">
-                        View More +
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="col col-12 col-md m-3 mb-0 px-5 px-md-2">
-                <div class="servicesList-title">Certificates</div>
-                <hr>
-
-                <div class="d-inline-flex servicesList-role d-flex flex-column">
-                    <a href="">Government</a>
-                    <a href="">Make In India</a>
-                    <a href="">GeM Registration</a>
-                </div>
-
-                <div class="collapse" id="collapseExample4">
-                    <div class="servicesList-role d-flex flex-column">
-                        <a href="">Make In Indian Services</a>
-                        <a href="">EPR Registration</a>
-                    </div>
-                </div>
-
-                <div class="servicesList-viewMoreTop">
-                    <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample" role="button">
-                        View More +
-                    </a>
-                </div>
-                    
-            </div>
-
-        </div>
-
-        <div class="crossIcon" onclick="servicesToggeleOff()" >
-            <i class="fa-solid fa-xmark"></i>
-        </div>
-
-        </div>
+        </nav>
+    
         <!-- Home -->
-        <div class="container pt-4">
+        <div class="container pt-4" >
             <div class="row">
 
                 <div class="col-12 col-md mb-4 ">
@@ -407,58 +454,91 @@
                 </div>
 
                 <div class="col-12 col-md d-flex align-items-center">
-                    <img src="./assets/images/vaidam/home-vaidam-img.jpg" alt="home-vaidam-img" class="img-fluid shadow" width="400">
+                    <img src="./assets/images/vaidam/home-vaidam-img.jpg" alt="home-vaidam-img" class="img-fluid shadow" width="430">
                 </div>
 
             </div>
         </div>
+    
         <!-- Our Services -->
          <div class="container pt-3 mt-5">
 
-            <div class="d-flex  align-items-center flex-column">
-                <div class="ourServices-title">Our Services <div></div></div>
-            </div>
-
-            <!-- Nav tabs -->
-            <!-- <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#menu1">Menu 1</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#menu2">Menu 2</a>
-                </li>
-            </ul> -->
-
-            <!-- Tab panes -->
-            <!-- <div class="tab-content">
-                <div id="home" class="container tab-pane active"><br>
-                <h3>HOME</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div id="menu1" class="container tab-pane fade"><br>
-                <h3>Menu 1</h3>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div id="menu2" class="container tab-pane fade"><br>
-                <h3>Menu 2</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            <div class="row">
+                <div class="d-flex  align-items-center flex-column">
+                    <div class="ourServices-title">Our Services <div></div></div>
                 </div>
             </div>
-            </div> -->
+
+            <div class="row my-5">
+
+                <div class="col-12 col-md-4 d-flex justify-content-center align-items-center flex-column px-2">
+
+                    <a href="#BusinessRegistration" class="our-service-list active"> 
+                        <span>
+                            <img src="./assets/images/ourServices/business registration icon.svg" loading="lazy" width="25" />
+                        </span>
+                         Business Registration
+                    </a>
+
+                    <a href="#TaxFiling" class="our-service-list">
+                        <span>
+                            <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="25" />
+                        </span>
+                        Tax Filing
+                    </a>
+
+                    <a href="#StockAudit" class="our-service-list">
+                        <span>
+                            <img src="./assets/images/ourServices/stock audit icon.svg" loading="lazy" width="25" />
+                        </span>
+                        Stock Audit
+                    </a>
+
+                    <a href="#ImportExport" class="our-service-list">
+                        <span>
+                            <img src="./assets/images/ourServices/import export icon.svg" loading="lazy" width="25" />
+                        </span>
+                        Import Export
+                    </a>
+
+                </div>
+                
+                <div class="col-12 col-md border overflow-hidden our-services-list-boxs">
+
+                    <div id="BusinessRegistration" class="w-100 h-100 p-2">
+                        1
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis labore ipsum aliquam eaque rem dicta! Culpa illo laudantium officiis facere.
+                    </div>
+                    
+                    <div id="TaxFiling" class="w-100 h-100 p-2">
+                        2
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis itaque deserunt distinctio esse eaque blanditiis numquam sunt modi minus animi!
+                    </div>
+
+                    <div id="StockAudit" class="w-100 h-100 p-2">
+                        3
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae reprehenderit cupiditate voluptas beatae maxime natus consequuntur vero necessitatibus magni ad?
+                    </div>
+
+                    <div id="ImportExport" class="w-100 h-100 p-2">
+                        4
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam cumque fuga, incidunt exercitationem ea dicta quaerat tenetur culpa sequi nisi!
+                    </div>
+
+                </div>
+
+            </div>
 
          </div>
-        <!-- Go to Top -->
+    
+         <!-- Go to Top -->
         <div class="goToTOP">
-            <a href="#navbar" class="text-white">
+            <a href="#toTop" class="text-white">
                 <i class="fa-solid fa-up-long"></i>
             </a>
         </div>
+
     </div>
-    
-                                   
 </body>
 <script>
 
@@ -495,6 +575,24 @@
         }
         viewToggele=!viewToggele;
     }
+
+// OurServices
+    document.querySelectorAll('.our-service-list').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // Remove active class from all links
+      document.querySelectorAll('.our-service-list').forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+
+      // Hide all service content divs
+      document.querySelectorAll('.our-services-list-boxs> div').forEach(div => div.style.display = 'none');
+
+    //   // Show the clicked one
+      const targetId = this.getAttribute('href');
+      document.querySelector(targetId).style.display = 'block';
+    });
+  });
 
 </script>
 </html>
