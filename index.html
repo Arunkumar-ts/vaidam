@@ -183,7 +183,8 @@
         text-decoration: none;
         }
         .box:hover{
-            color:blue;
+            font-size: 18px;
+            color:#1a73e8;
         }
 
         .cyan { background-color: #00cfd1; }
@@ -196,12 +197,12 @@
 
         /* ourservices */
         .ourServices-title{
-            color: rgb(2, 173, 173);
+            color: rgb(0, 91, 150);
             font-size: 30px;
             font-weight: 600;
         }
         .ourServices-title > div{
-            background-color:rgb(41, 196, 196);
+            background-color:rgb(0, 91, 150);
             border-radius: 5px;
             width: 30%;
             height: 7px;
@@ -218,14 +219,15 @@
             border-bottom: 1px solid white;
             transition: all .3s linear;
         }
+        .our-service-list:hover{
+            color:white ;
+            background-color: #0649a0;
+        }
         .our-service-list>span{
             padding: 3px 5px 7px 10px;
             margin: 5px;
             border-radius: 50%;
-            background-color: #1e6575;   
-        }
-        .our-service-list>span>img{
-            fill: black;
+            background-color: #1a73e8;   
         }
         .our-service-list.active>span{
             color:white !important;
@@ -235,7 +237,90 @@
             color:  rgb(2, 124, 173);
             background-color: #e8f0fe;
         }
+        .our-services-list-boxs{
+            transition: all .3s linear;
+        }
+        .out-services-card-container > a{
+            text-decoration: none;
+        }
+        .out-services-card-container{
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            display: none;
+        }
+        .out-services-card-container1{
+            display: flex;
+        }
+        .our-services-card{
+            box-sizing: border-box;
+            margin: 10px;
+            width: 340px;
+            height: 160px;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 10px #a8a8a8;
+        }
+        .our-services-card:hover{
+            box-shadow: 0 0 10px #1a73e8;
+        }
+        .our-services-card>span{
+            padding: 5px 6px 8px 6px;
+            border-radius: 50%;
+            background-color: #1a73e8;  
+            
+        }
+        .our-services-card>p{
+            color: black;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.2;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .our-services-card>h4{
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            color:#1a73e8 ;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .our-services-card>h4>i{
+            color: teal !important;
+        }
     
+        /* Why Choose page */
+        .why-we{
+            background-color: #d4eff0;
+        }
+        .why-we-content>h2{
+            font-weight: 600;
+        }
+        .why-we-content>p{
+            font-size: 20px;
+            line-height: 2;
+        }
+        .why-we-content>ul{
+            list-style: none;
+        }
+        .why-we-content>ul>li{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 15px 0px;
+        }
+        .why-we-content>ul>li>span>i{
+            color: rgb(2, 147, 173);
+            font-size: 30px;
+        }
+
+        /* Our Mission & Vision */
+
+
+
         /* go to Top */
         .goToTOP{
             position: fixed;
@@ -243,8 +328,11 @@
             right: 30px;
             padding: 10px 13px;
             border-radius: 50%;
-            background-color: rgba(255, 69, 0, 0.9);
+            background-color:rgb(2, 124, 173);
             cursor: pointer;
+        }
+        .goToTOP:hover{
+            box-shadow: 0 0 10px rgb(2, 124, 173);
         }
     </style>
 </head>
@@ -485,7 +573,7 @@
         </nav>
     
         <!-- Home -->
-        <div class="container pt-4" >
+        <div class="container pt-4">
             <div class="row">
 
                 <div class="col-12 col-md mb-4 ">
@@ -509,7 +597,7 @@
 
                         <div class="shadow d-flex w-100">
 
-                            <div class="left-panel ">
+                            <div class="left-panel pe-3 ">
                                 <img src="./assets/images/vaidam/vaidam v logo.png" width="130" class="logo">
                             </div>
       
@@ -577,26 +665,184 @@
 
                 </div>
                 
-                <div class="col-12 col-md border overflow-hidden our-services-list-boxs">
+                <div class="col-12 col-md overflow-hidden our-services-list-boxs">
 
-                    <div id="BusinessRegistration" class="w-100 h-100 p-2">
-                        1
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis labore ipsum aliquam eaque rem dicta! Culpa illo laudantium officiis facere.
+                    <div id="BusinessRegistration" class="w-100 p-2 out-services-card-container out-services-card-container1 ">
+
+                        <a href="">
+                            <div class="our-services-card ">
+                                <span>
+                                    <img src="./assets/images/ourServices/business registration icon.svg" loading="lazy" width="25" />
+                                </span>
+                                <h4>Startup Registration <i class="fa-regular fa-hand-point-right"></i></h4>
+                                <p>Assistance and guidance in the registration process for startups, ensuring compliance with all legal requirements and facilitating a solid foundation for new businesses.</p>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="our-services-card ">
+                                <span>
+                                    <img src="./assets/images/ourServices/business registration icon.svg" loading="lazy" width="25" />
+                                </span>
+                                <h4>Company Registration <i class="fa-regular fa-hand-point-right"></i></h4>
+                                <p>Support in the process of registering a new company, including the necessary documentation and legal formalities to establish the company as a legally recognized entity.</p>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="our-services-card ">
+                                <span>
+                                    <img src="./assets/images/ourServices/business registration icon.svg" loading="lazy" width="25" />
+                                </span>
+                                <h4>LLP Registration <i class="fa-regular fa-hand-point-right"></i></h4>
+                                <p>Assistance in the registration of Limited Liability Partnerships (LLP), offering the benefits of a partnership with limited liability, and fulfilling all regulatory requirements.</p>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="our-services-card ">
+                                <span>
+                                    <img src="./assets/images/ourServices/business registration icon.svg" loading="lazy" width="25" />
+                                </span>
+                                <h4>Udayam Registration <i class="fa-regular fa-hand-point-right"></i></h4>
+                                <p> We provide end-to-end support for startups, guiding them through the registration process and ensuring compliance with all legal obligations. Our services are designed to help new businesses establish a solid legal and operational foundation.</p>
+                            </div>
+                        </a>
+
                     </div>
                     
-                    <div id="TaxFiling" class="w-100 h-100 p-2">
-                        2
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis itaque deserunt distinctio esse eaque blanditiis numquam sunt modi minus animi!
+                    <div id="TaxFiling" class="w-100 p-2 out-services-card-container ">
+
+                        <a href="">
+                            <div class="our-services-card ">
+                                <span>
+                                    <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="20" />
+                                </span>
+                                <h4>GST Registration <i class="fa-regular fa-hand-point-right"></i></h4>
+                                <p>Helping businesses register for the Goods and Services Tax (GST) regime, ensuring compliance with GST laws and regulations and obtaining the necessary GST registration certificate.</p>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="our-services-card ">
+                                <span>
+                                    <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="20" />
+                                </span>
+                                <h4>ITR Filing <i class="fa-regular fa-hand-point-right"></i></h4>
+                                <p> Assisting individuals and businesses with the filing of their Income Tax Returns (ITR), ensuring proper disclosure of income, deductions, and tax payments to comply with tax laws.
+                                </p>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="our-services-card ">
+                                <span>
+                                    <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="20" />
+                                </span>
+                                <h4>GST Return Filing <i class="fa-regular fa-hand-point-right"></i></h4>
+                                <p>Aiding businesses in filing regular returns under the GST law, ensuring accurate reporting of sales, purchases, and tax payments to the authorities.</p>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="our-services-card ">
+                                <span>
+                                    <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="20" />
+                                </span>
+                                <h4>TDS Return Filing <i class="fa-regular fa-hand-point-right"></i></h4>
+                                <p>Assisting with the filing of Tax Deducted at Source (TDS) returns, ensuring compliance with TDS regulations and accurate reporting of TDS deducted and paid.</p>
+                            </div>
+                        </a>
+
                     </div>
 
-                    <div id="StockAudit" class="w-100 h-100 p-2">
-                        3
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae reprehenderit cupiditate voluptas beatae maxime natus consequuntur vero necessitatibus magni ad?
+                    <div id="StockAudit" class="w-100 p-2 out-services-card-container ">
+                       
+                        <a href="">
+                            <div class="our-services-card ">
+                                <span>
+                                    <img src="./assets/images/ourServices/stock audit icon.svg" loading="lazy" width="20" />
+                                </span>
+                                <h4>Manufacturing <i class="fa-regular fa-hand-point-right"></i></h4>
+                                <p> A thorough examination and verification of a company's stock and inventory to ensure accuracy, transparency, and regulatory compliance, assisting in identifying discrepancies and maintaining proper stock records.</p>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="our-services-card ">
+                                <span>
+                                    <img src="./assets/images/ourServices/stock audit icon.svg" loading="lazy" width="20" />
+                                </span>
+                                <h4>Textiel and Apparel <i class="fa-regular fa-hand-point-right"></i></h4>
+                                <p>Our service ensures precision, transparency, and adherence to industry and regulatory standards in managing textile and apparel inventories. By conducting a thorough evaluation, we help detect inconsistencies and maintain accurate stock records, enabling seamless operations and compliance.</p>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="our-services-card ">
+                                <span>
+                                    <img src="./assets/images/ourServices/stock audit icon.svg" loading="lazy" width="20" />
+                                </span>
+                                <h4>Retail Shop <i class="fa-regular fa-hand-point-right"></i></h4>
+                                <p>A meticulous review and authentication of a retail shop's inventory, focusing on accuracy, transparency, and compliance with industry regulations. Our service plays a vital role in pinpointing discrepancies and ensuring the maintenance of precise stock records essential for efficient retail operations.</p>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="our-services-card ">
+                                <span>
+                                    <img src="./assets/images/ourServices/stock audit icon.svg" loading="lazy" width="20" />
+                                </span>
+                                <h4>Pharmaceutical Sector <i class="fa-regular fa-hand-point-right"></i></h4>
+                                <!-- <p>A rigorous examination and validation of inventory within the pharmaceutical industry, emphasizing precision, transparency, and adherence to stringent regulatory requirements. Our service is pivotal in identifying any discrepancies, thereby ensuring the integrity of stock records crucial for maintaining operational efficiency and compliance standards within the pharmaceutical sector.</p> -->
+                                <p>A rigorous examination and validation of inventory within the pharmaceutical industry, emphasizing precision, transparency, and adherence to stringent regulatory requirements. Our service is pivotal in identifying any discrepancies, thereby ensuring the integrity of stock records crucial for maintaining..</p>
+                            </div>
+                        </a>
+
                     </div>
 
-                    <div id="ImportExport" class="w-100 h-100 p-2">
-                        4
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam cumque fuga, incidunt exercitationem ea dicta quaerat tenetur culpa sequi nisi!
+                    <div id="ImportExport" class="w-100 p-2 out-services-card-container ">
+
+                        <a href="">
+                            <div class="our-services-card ">
+                                <span>
+                                    <img src="./assets/images/ourServices/import export icon.svg" loading="lazy" width="20" />
+                                </span>
+                                <h4>Import-Export Code (IEC) <i class="fa-regular fa-hand-point-right"></i></h4>
+                                <p>Assistance in obtaining the Import-Export Code, a registration required for undertaking import and export activities, facilitating international trade transactions.</p>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="our-services-card ">
+                                <span>
+                                    <img src="./assets/images/ourServices/import export icon.svg" loading="lazy" width="20" />
+                                </span>
+                                <h4>Certificate of Origin <i class="fa-regular fa-hand-point-right"></i></h4>
+                                <p>Facilitating the issuance of Certificates of Origin, an essential document in international trade to validate the origin of exported goods and benefit from preferential tariffs.</p>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="our-services-card ">
+                                <span>
+                                    <img src="./assets/images/ourServices/import export icon.svg" loading="lazy" width="20" />
+                                </span>
+                                <h4>SAFTA Agreement <i class="fa-regular fa-hand-point-right"></i></h4>
+                                <p>SAFTA Agreement is a regional free trade agreement among South Asian Association for Regional Corporation (SAARC) countries, it includes members of eight major countries including India.</p>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="our-services-card ">
+                                <span>
+                                    <img src="./assets/images/ourServices/import export icon.svg" loading="lazy" width="20" />
+                                </span>
+                                <h4>Coconut Board Registration <i class="fa-regular fa-hand-point-right"></i></h4>
+                                <p>Coconut board certificate is provided to the entities that deal with coconut commodities.</p>
+                            </div>
+                        </a>
+
                     </div>
 
                 </div>
@@ -605,7 +851,36 @@
 
          </div>
     
-         <!-- Go to Top -->
+        <!-- Why Choose page -->
+         <div class="container-fluid why-we mb-5">
+
+            <div class="row">
+
+                <div class="col-12 col-md d-flex justify-content-center">
+                    <img src="./assets/images/why we/why-choose-us.webp" alt="why choose Vaidam Consultancy" loading="lazy" width="77%" />
+                </div>
+
+                <div class="col-12 col-md why-we-content d-flex flex-column  justify-content-center">
+                    <h2>Why Choose Vaidam Consultancy?</h2>
+                    <p>At Vaidam Consultancy, we are incredibly proud to be India's leading platform for all your accounting, registration and compliance needs. We cater from startups to large business houses, aiming to be unmatched leaders in delivering exceptional services.
+                    </p>
+                    <ul>
+                        <li><span><i class="fa-sharp fa-solid fa-circle-check"></i></span> Trusted by startups to enterprises</li>
+                        <li><span><i class="fa-sharp fa-solid fa-circle-check"></i></span> Strategic collaborations & growth</li>
+                        <li><span><i class="fa-sharp fa-solid fa-circle-check"></i></span> PAN India Service</li>
+                        <li><span><i class="fa-sharp fa-solid fa-circle-check"></i></span> Affordable Pricing</li>
+                        <li><span><i class="fa-sharp fa-solid fa-circle-check"></i></span> Data-driven, actionable result</li>
+                    </ul>
+                </div>
+
+            </div>
+
+         </div>
+
+        <!-- Our Mission & Vision -->
+         
+
+        <!-- Go to Top -->
         <div>
             <a href="#toTop" class="text-white goToTOP">
                 <i class="fa-solid fa-up-long"></i>
@@ -660,11 +935,11 @@
       this.classList.add('active');
 
       // Hide all service content divs
-      document.querySelectorAll('.our-services-list-boxs> div').forEach(div => div.style.display = 'none');
+      document.querySelectorAll('.out-services-card-container').forEach(div => div.style.display = 'none');
 
     //   // Show the clicked one
       const targetId = this.getAttribute('href');
-      document.querySelector(targetId).style.display = 'block';
+      document.querySelector(targetId).style.display = 'flex';
     });
   });
 
