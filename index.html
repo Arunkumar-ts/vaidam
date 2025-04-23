@@ -198,7 +198,7 @@
         /* ourservices */
         .ourServices-title{
             color: rgb(0, 91, 150);
-            font-size: 30px;
+            font-size: 35px;
             font-weight: 600;
         }
         .ourServices-title > div{
@@ -295,7 +295,15 @@
             background-color: #d4eff0;
         }
         .why-we-content>h2{
+            font-size: 40px;
             font-weight: 600;
+        }
+        .why-we-content > .bar{
+            background-color:rgb(0, 91, 150);
+            border-radius: 5px;
+            width: 20%;
+            height: 10px;
+            margin: 10px 0px;
         }
         .why-we-content>p{
             font-size: 20px;
@@ -318,8 +326,67 @@
         }
 
         /* Our Mission & Vision */
+        .our-Mission-Vision{
+            background-color: #008EAA;
+            min-height: 100vh;
+        }
+        .our-Mission-Vision-title{
+            font-size: 35px;
+            font-weight: 600;
+            color: white;
+        }
+        .our-Mission-Vision-bar{
+            background-color:white;
+            border-radius: 5px;
+            width: 80px;
+            height: 7px;
+            margin-top: 7px;
+        }
+        .our-mission-card{
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 10px 0px;
+            background-color: rgba(32, 176, 233, 0.288);
+            color: white;
+            transition: all .3s linear;
+            min-height: 250px;
+            box-shadow: 0 0 10px #a8a8a8;
+        }
+        .our-mission-card:hover{
+            box-shadow: 0 0 25px #2bb1b1;
+            color:rgb(2, 124, 173);
+            background-color: rgba(247, 244, 244, 0.637);
+        }
+        .our-mission-card>h4{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .our-mission-card>p{
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.842);
+        }
+        .our-mission-card>div{
+            margin-bottom: 10px;
+        }
 
-
+        /* paper work box */
+        .paper-work{
+            position: relative;
+        }
+        .paper-work-box{
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: -130px;
+            border-radius: 20px;
+            background-color: white;
+        }
+        .paper-work-box-title{
+            font-size: 40px;
+            font-weight: bold;
+            color: #00cfd1;
+        }
 
         /* go to Top */
         .goToTOP{
@@ -624,11 +691,12 @@
         </div>
     
         <!-- Our Services -->
-         <div class="container pt-3 mt-5">
+        <div class="container pt-3 mt-5">
 
             <div class="row">
-                <div class="d-flex  align-items-center flex-column">
-                    <div class="ourServices-title">Our Services <div></div></div>
+                <div class="d-flex align-items-center flex-column">
+                    <div class="ourServices-title">Our Services <div>
+                    </div></div>
                 </div>
             </div>
 
@@ -852,10 +920,10 @@
 
             </div>
 
-         </div>
+        </div>
     
         <!-- Why Us -->
-         <div class="container-fluid why-we mb-5">
+        <div class="container-fluid why-we">
 
             <div class="row">
 
@@ -865,6 +933,7 @@
 
                 <div class="col-12 col-md why-we-content d-flex flex-column  justify-content-center">
                     <h2>Why Choose Vaidam Consultancy?</h2>
+                    <div class="bar"></div>
                     <p>At Vaidam Consultancy, we are incredibly proud to be India's leading platform for all your accounting, registration and compliance needs. We cater from startups to large business houses, aiming to be unmatched leaders in delivering exceptional services.
                     </p>
                     <ul>
@@ -878,10 +947,71 @@
 
             </div>
 
-         </div>
+        </div>
 
         <!-- Our Mission & Vision -->
-         
+        <div class="container-fluid our-Mission-Vision">
+            
+            <div class="row">
+                <div class="d-flex mt-4 align-items-center flex-column">
+                    <div class="our-Mission-Vision-title">Our Mission & Vision</div>
+                    <div class="our-Mission-Vision-bar"></div>
+                </div>
+            </div>
+
+
+            <div class="container mt-5">
+
+                <div class="row">
+
+                    <div class="col-12 col-md">
+                        <div class="our-mission-card ">
+                            <div>
+                                <span>
+                                    <img src="./assets/images/our mission & vision/mission icon.svg" alt="mission icon" width="50">
+                                </span>
+                            </div>
+                            <h4>Mission</h4>
+                            <p>To deliver cutting-edge, customized consultancy solutions that drive sustainable growth, foster innovation, and build long-term success for businesses across India. </p>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-md">
+                        <div class="our-mission-card ">
+                            <div>
+                                <span>
+                                    <img src="./assets/images/our mission & vision/vision icon.svg" alt="mission icon" width="50">
+                                </span>
+                            </div>
+                            <h4>Vision</h4>
+                            <p>Empowering India's Growth Story - Transforming Challenges into Opportunities with Innovation, Expertise, and Trust. 
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+                
+        </div>
+
+        <!-- Paper work box -->
+         <div class="container-fluid paper-work">
+            <div class="container border paper-work-box shadow">
+                <div class="row">
+
+                    <div class="col d-flex align-items-center justify-content-center flex-column ">
+                        <h2 class="paper-work-box-title">Let us handle the paperwork while you focus on growth <h2>
+                        <p class="paper-work-box-p">Vaidam Consultancy makes business registration and compliance.</p>
+                    </div>
+
+                    <div class="col-5 d-none d-md-block">
+                        <img src="./assets/images/paper work box/homepage_img.webp" alt="paper work book image" width="310">
+                    </div>
+
+                </div>
+            </div>
+         </div>
 
         <!-- Go to Top -->
         <div>
