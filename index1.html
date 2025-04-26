@@ -1,0 +1,40 @@
+<div style="border:1px solid #ccc; padding:10px; margin:10px; border-radius:8px; max-width:400px;">
+    <p id="template1" style="margin:0;">
+      Hey [Name], just checking in—let me know if you need anything!
+    </p>
+    <button onclick="copyToClipboard('template1')">Copy</button>
+  </div>
+  
+  <script>
+    function copyToClipboard(elementId) {
+      const text = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Copied to clipboard!");
+      });
+    }
+  </script>
+  
+  <div style="border:1px solid #ccc; padding:15px; margin-bottom:10px; border-radius:8px; max-width:500px;">
+    <p id="msg1">Hi [Name], just checking in to see if you had a chance to review my last message.</p>
+    <button onclick="copyToClipboard('msg1')">Copy</button>
+  </div>
+  <details>
+    <summary>Quick Follow-up</summary>
+    <p id="msg2">Hi [Name], just checking in to see if you had a chance to review my last message.</p>
+    <button onclick="copyToClipboard('msg2')">Copy</button>
+  </details>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+    <div style="border:1px solid #eee; padding:10px;">
+      <p id="msg3">Welcome aboard, [Name]! We're excited to have you join the team.</p>
+      <button onclick="copyToClipboard('msg3')">Copy</button>
+    </div>
+    <div style="border:1px solid #eee; padding:10px;">
+      <p id="msg4">Hope you're doing well! Let me know if there's anything I can help with.</p>
+      <button onclick="copyToClipboard('msg4')">Copy</button>
+    </div>
+  </div>
+  <div style="background:#f1f1f1; padding:10px; border-radius:20px; margin:10px 0; width:max-content;">
+    <span id="msg5">Thanks so much for your time today—really appreciate the conversation!</span>
+    <button onclick="copyToClipboard('msg5')">📋</button>
+  </div>
+      

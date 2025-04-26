@@ -33,7 +33,22 @@
             position: sticky;
             top: 0px;
             z-index: 100;
-            background-color: white;
+            background-image: url(./assets/images/background/navbarBG.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 80px;
+            border-bottom: 1px solid #555852;
+        }
+        .offcanvas-header{
+            background-image: url(./assets/images/background/navbarBG.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-bottom: 1px solid #555852;
+        }
+        .offcanvas-body{
+            background-image: url(./assets/images/background/bg2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         .navbar-toggler{
             box-shadow: none !important;
@@ -51,22 +66,25 @@
         .navLinks > ul > li {
             margin: 20px 0px 0px 20px;
             font-weight: 500;
-            font-size: 18px;
+            font-size: 20px;
         }
         .navLinks > ul > li > a {
             color: black;
             text-decoration: none;
             cursor: pointer;
-            transition: all .2s linear;
+            transition: all .1s linear;
         }
         .navLinks > ul > li > a:hover {
-            color: blue;
+            color: white;
         }
     
         /* services */
         .services{
             position: relative;
             z-index: 50;
+            max-height: 500px;
+            overflow-y: scroll;
+            overflow-x: hidden;
         }
         .servicesList > ul {
             list-style: none;
@@ -74,15 +92,17 @@
         .servicesList-title{
             font-weight: 600;
             font-size: 20px;
+            color: #6d7a5f;
+
         }
         .servicesList-viewMore {
             text-decoration: none;
-            color: rgb(253, 126, 79);
+            color: #6d7a5f;
             font-weight: 600;
             font-size: 13px;
         }
         .servicesList-role a{
-            color: rgb(255, 145, 0);
+            color: blue;
             font-size: 18px;
             text-decoration: none;
             margin-bottom: 5px;
@@ -90,16 +110,18 @@
         .servicesList-role a:hover{
             transform: translateX(10px);
             transition: all .3s linear;
-            color: blue;
         }
         .servicesList-viewMoreTop{
             border-top: 1px dashed #ccc;
             margin-bottom: 10px;
         }
         .crossIcon{
-            position: absolute;
-            right: 20px;
-            top: 10px;
+            position: fixed;
+            right: 150px;
+            top: 80px;
+            @media (max-width:500px) {
+            right: 40px;
+            }
             padding: 5px 8px;
             border-radius: 50%;
         }
@@ -108,10 +130,16 @@
         }
     
         /* home */
+        .home{
+            background-image: url(./assets/images/background/bg2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 80vh;
+            
+        }
         .home-title{
             font-size: 40px;
             font-weight: 700;
-            color: rgb(0, 91, 150);
         }
         .home-title-bar{
             background-color:rgb(0, 91, 150);
@@ -123,25 +151,24 @@
         .home-title-slo{
             font-style: italic;
             font-size: 20px;
-            color: rgb(0, 91, 150);
+            font-weight: bold;
         }
         .home-btn-logo{
             cursor: pointer;
             padding: 5px 10px ;
-            background-color: transparent;
-            border: 1px solid rgb(0, 91, 150);
-            border-radius: 20px;
+            background-color:#b1c0a1;
+            border: 1px solid #555852;
+            border-radius: 15px 1px 15px 1px;
             margin-top: 20px;
             margin-bottom: 10px;
-            color:rgb(0, 91, 150);
             font-weight: 600;
             font-size: 18px;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 10px;
             transition: all .3s linear;
         }
         .home-btn-logo:hover{
-            color: white;
-            background-color: rgb(4, 146, 202);
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 10px;
+            background-color: #b1c0a1b2;
         }
         /* home - image */
         .home-img {
@@ -155,6 +182,7 @@
         align-items: center;
         justify-content: center;
         min-width: 30%;
+        border-radius: 20px 0px 0px 0px;
         }
 
         .logo {
@@ -180,6 +208,7 @@
         cursor: pointer;
         user-select: none;
         transition: all .3s linear;
+        text-shadow: 0px 0px 5px black;
         text-decoration: none;
         }
         .box:hover{
@@ -196,6 +225,14 @@
 
 
         /* ourservices */
+        .our-services-bg{
+         /* background-color: #b1c0a1; */
+         background-image: url(./assets/images/background/bg10.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+        border: 1px solid transparent;
+        }
         .ourServices-title{
             color: rgb(0, 91, 150);
             font-size: 35px;
@@ -292,7 +329,11 @@
     
         /* Why Us */
         .why-we{
-            background-color: #d4eff0;
+            background-color: #e0e0e0;
+            /* background-image: url(./assets/images/background/bg10.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; */
         }
         .why-we-content>h2{
             font-size: 40px;
@@ -406,18 +447,19 @@
 </head>
 <body>
     <div class="body" id="toTop">
+
         <!-- Navbar -->
-        <nav class="navbar container-fluid p-0 shadow" id="navbar">
+        <nav class="navbar container-fluid p-0 shadow bg-body-tertiary" id="navbar">
 
             <!-- Nav -->
-            <div class="container  ">
+            <div class="container ">
 
-                <img src="./assets/images/vaidam/logo1.png" alt="vaidam logo" class="img-fluid" width="170">
+                <img src="./assets/images/vaidam/logo1.png" alt="vaidam logo" class="img-fluid" width="190">
 
                 <div class="d-none d-md-flex navLinks ">
 
                     <ul>
-                        <li><a href="">Home</a></li>
+                        <li><a href="index1.html">Home</a></li>
                         <li><a class="dropdown-toggle" onclick="servicesToggeleOn()">Services</a></li>
                         <li><a href="">About Us</a></li>
                         <li><a href="">Blog</a></li>
@@ -432,9 +474,9 @@
 
                 <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
-                    <div class="offcanvas-header bg-body-tertiary">
+                    <div class="offcanvas-header">
                         <div class="offcanvas-title" id="offcanvasNavbarLabel" >
-                            <img src="./assets/images/vaidam/logo.png" alt="vaidam logo" class="img-fluid" width="140">
+                            <img src="./assets/images/vaidam/logo1.png" alt="vaidam logo" class="img-fluid" width="150">
                         </div>
                         <button type="button" class="btn-close me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
@@ -444,7 +486,7 @@
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
                             <li class="nav-item">
-                                <a class="nav-link text-black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >Home</a>
+                                <a class="nav-link text-black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"href="index1.html">Home</a>
                             </li>
                             
                             <li class="nav-item">
@@ -641,286 +683,290 @@
         </nav>
     
         <!-- Home -->
-        <div class="container pt-4">
-            <div class="row">
-
-                <div class="col-12 col-md mb-4 ">
-                    <div class="home-title">Support Solution For</div>
-                    <div class="home-title">Every Business</div>
-                    <div class="home-title-bar"></div>
-                    <div class="home-title-slo">
-                        <div>Strategic Focus, Measurable</div>
-                    </div>
-                    <div class="home-title-slo">
-                        <div>Results</div>
-                    </div>
-                    <button class="home-btn-logo">Get Started 
-                        <span><img src="./assets/images/vaidam/home-btn-logo.svg" alt="home-btn-logo" width="20"></span>
-                    </button>
-                </div>
-
-                <div class="col-12 col-md ">
-
-                    <div class="container home-img p-0">
-
-                        <div class="shadow d-flex w-100">
-
-                            <div class="left-panel pe-3 ">
-                                <img src="./assets/images/vaidam/vaidam v logo.png" width="130" class="logo">
-                            </div>
-      
-                            <div class="right-panel ">
-                                
-                            <a href="#" class="box cyan">BUSINESS<br>REGISTRATION</a>
-                            <a href="#" class="box pink">DRAFTING</a>
-                            <a href="#" class="box purple">TRADEMARK<br>REGISTRATION</a>
-                            <a href="#" class="box orange">MSME<br>REGISTRATION</a>
-                            <a href="#" class="box dark-purple">FSSAI/FOOD<br>LICENSE</a>
-                            <a href="#" class="box yellow">TAXATION</a>
-
-                            </div>
-
+        <div class="container-fluid home">
+            <div class="container py-5">
+                <div class="row">
+    
+                    <div class="col-12 col-md mb-4 ">
+                        <div class="home-title">SUPPORT SOLUTION FOR</div>
+                        <div class="home-title">EVERY BUSINESS</div>
+                        <div class="home-title-bar"></div>
+                        <div class="home-title-slo">
+                            <div>STRATEGIC FOCUS, MEASURABLE</div>
                         </div>
-                        
-
+                        <div class="home-title-slo">
+                            <div>RESULTS</div>
+                        </div>
+                        <button class="home-btn-logo">Get Started 
+                            <span><img src="./assets/images/vaidam/vaidam v logo.png" alt="home-btn-logo" width="20"></span>
+                        </button>
                     </div>
-
+    
+                    <div class="col-12 col-md ">
+    
+                        <div class="container home-img p-0">
+    
+                            <div class="shadow d-flex w-100 ">
+    
+                                <div class="left-panel pe-3 ">
+                                    <img src="./assets/images/vaidam/vaidam v logo.png" width="130" class="logo">
+                                </div>
+          
+                                <div class="right-panel ">
+                                    
+                                <a href="#" class="box cyan">BUSINESS<br>REGISTRATION</a>
+                                <a href="#" class="box pink">DRAFTING</a>
+                                <a href="#" class="box purple">TRADEMARK<br>REGISTRATION</a>
+                                <a href="#" class="box orange">MSME<br>REGISTRATION</a>
+                                <a href="#" class="box dark-purple">FSSAI/FOOD<br>LICENSE</a>
+                                <a href="#" class="box yellow">TAXATION</a>
+    
+                                </div>
+    
+                            </div>
+                            
+    
+                        </div>
+    
+                    </div>
+    
                 </div>
-
-            </div>
+            </div> 
         </div>
     
         <!-- Our Services -->
-        <div class="container pt-3 mt-5">
-
-            <div class="row">
-                <div class="d-flex align-items-center flex-column">
-                    <div class="ourServices-title">Our Services <div>
-                    </div></div>
-                </div>
-            </div>
-
-            <div class="row my-5">
-
-                <div class="col-12 col-md-4 d-flex justify-content-center align-items-center flex-column px-2">
-
-                    <a href="#BusinessRegistration" class="our-service-list active"> 
-                        <span>
-                            <img src="./assets/images/ourServices/business registration icon.svg" loading="lazy" width="25" />
-                        </span>
-                         Business Registration
-                    </a>
-
-                    <a href="#TaxFiling" class="our-service-list">
-                        <span>
-                            <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="25" />
-                        </span>
-                        Tax Filing
-                    </a>
-
-                    <a href="#StockAudit" class="our-service-list">
-                        <span>
-                            <img src="./assets/images/ourServices/stock audit icon.svg" loading="lazy" width="25" />
-                        </span>
-                        Stock Audit
-                    </a>
-
-                    <a href="#ImportExport" class="our-service-list">
-                        <span>
-                            <img src="./assets/images/ourServices/import export icon.svg" loading="lazy" width="25" />
-                        </span>
-                        Import Export
-                    </a>
-
-                </div>
-                
-                <div class="col-12 col-md overflow-hidden our-services-list-boxs">
-
-                    <div id="BusinessRegistration" class="w-100 p-2 out-services-card-container out-services-card-container1 ">
-
-                        <a href="">
-                            <div class="our-services-card ">
-                                <span>
-                                    <img src="./assets/images/ourServices/business registration icon.svg" loading="lazy" width="25" />
-                                </span>
-                                <h4>Startup Registration <i class="fa-regular fa-hand-point-right"></i></h4>
-                                <p>Assistance and guidance in the registration process for startups, ensuring compliance with all legal requirements and facilitating a solid foundation for new businesses.</p>
-                            </div>
-                        </a>
-
-                        <a href="">
-                            <div class="our-services-card ">
-                                <span>
-                                    <img src="./assets/images/ourServices/business registration icon.svg" loading="lazy" width="25" />
-                                </span>
-                                <h4>Company Registration <i class="fa-regular fa-hand-point-right"></i></h4>
-                                <p>Support in the process of registering a new company, including the necessary documentation and legal formalities to establish the company as a legally recognized entity.</p>
-                            </div>
-                        </a>
-
-                        <a href="">
-                            <div class="our-services-card ">
-                                <span>
-                                    <img src="./assets/images/ourServices/business registration icon.svg" loading="lazy" width="25" />
-                                </span>
-                                <h4>LLP Registration <i class="fa-regular fa-hand-point-right"></i></h4>
-                                <p>Assistance in the registration of Limited Liability Partnerships (LLP), offering the benefits of a partnership with limited liability, and fulfilling all regulatory requirements.</p>
-                            </div>
-                        </a>
-
-                        <a href="">
-                            <div class="our-services-card ">
-                                <span>
-                                    <img src="./assets/images/ourServices/business registration icon.svg" loading="lazy" width="25" />
-                                </span>
-                                <h4>Udayam Registration <i class="fa-regular fa-hand-point-right"></i></h4>
-                                <p> We provide end-to-end support for startups, guiding them through the registration process and ensuring compliance with all legal obligations. Our services are designed to help new businesses establish a solid legal and operational foundation.</p>
-                            </div>
-                        </a>
-
-                    </div>
-                    
-                    <div id="TaxFiling" class="w-100 p-2 out-services-card-container ">
-
-                        <a href="">
-                            <div class="our-services-card ">
-                                <span>
-                                    <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="20" />
-                                </span>
-                                <h4>GST Registration <i class="fa-regular fa-hand-point-right"></i></h4>
-                                <p>Helping businesses register for the Goods and Services Tax (GST) regime, ensuring compliance with GST laws and regulations and obtaining the necessary GST registration certificate.</p>
-                            </div>
-                        </a>
-
-                        <a href="">
-                            <div class="our-services-card ">
-                                <span>
-                                    <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="20" />
-                                </span>
-                                <h4>ITR Filing <i class="fa-regular fa-hand-point-right"></i></h4>
-                                <p> Assisting individuals and businesses with the filing of their Income Tax Returns (ITR), ensuring proper disclosure of income, deductions, and tax payments to comply with tax laws.
-                                </p>
-                            </div>
-                        </a>
-
-                        <a href="">
-                            <div class="our-services-card ">
-                                <span>
-                                    <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="20" />
-                                </span>
-                                <h4>GST Return Filing <i class="fa-regular fa-hand-point-right"></i></h4>
-                                <p>Aiding businesses in filing regular returns under the GST law, ensuring accurate reporting of sales, purchases, and tax payments to the authorities.</p>
-                            </div>
-                        </a>
-
-                        <a href="">
-                            <div class="our-services-card ">
-                                <span>
-                                    <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="20" />
-                                </span>
-                                <h4>TDS Return Filing <i class="fa-regular fa-hand-point-right"></i></h4>
-                                <p>Assisting with the filing of Tax Deducted at Source (TDS) returns, ensuring compliance with TDS regulations and accurate reporting of TDS deducted and paid.</p>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <div id="StockAudit" class="w-100 p-2 out-services-card-container ">
-                       
-                        <a href="">
-                            <div class="our-services-card ">
-                                <span>
-                                    <img src="./assets/images/ourServices/stock audit icon.svg" loading="lazy" width="20" />
-                                </span>
-                                <h4>Manufacturing <i class="fa-regular fa-hand-point-right"></i></h4>
-                                <p> A thorough examination and verification of a company's stock and inventory to ensure accuracy, transparency, and regulatory compliance, assisting in identifying discrepancies and maintaining proper stock records.</p>
-                            </div>
-                        </a>
-
-                        <a href="">
-                            <div class="our-services-card ">
-                                <span>
-                                    <img src="./assets/images/ourServices/stock audit icon.svg" loading="lazy" width="20" />
-                                </span>
-                                <h4>Textiel and Apparel <i class="fa-regular fa-hand-point-right"></i></h4>
-                                <p>Our service ensures precision, transparency, and adherence to industry and regulatory standards in managing textile and apparel inventories. By conducting a thorough evaluation, we help detect inconsistencies and maintain accurate stock records...</p>
-                                <!-- <p>Our service ensures precision, transparency, and adherence to industry and regulatory standards in managing textile and apparel inventories. By conducting a thorough evaluation, we help detect inconsistencies and maintain accurate stock records, enabling seamless operations and compliance.</p> -->
-                            </div>
-                        </a>
-
-                        <a href="">
-                            <div class="our-services-card ">
-                                <span>
-                                    <img src="./assets/images/ourServices/stock audit icon.svg" loading="lazy" width="20" />
-                                </span>
-                                <h4>Retail Shop <i class="fa-regular fa-hand-point-right"></i></h4>
-                                <p>A meticulous review and authentication of a retail shop's inventory, focusing on accuracy, transparency, and compliance with industry regulations. Our service plays a vital role in pinpointing discrepancies and ensuring the maintenance of precise stock records...</p>
-                                <!-- <p>A meticulous review and authentication of a retail shop's inventory, focusing on accuracy, transparency, and compliance with industry regulations. Our service plays a vital role in pinpointing discrepancies and ensuring the maintenance of precise stock records essential for efficient retail operations.</p> -->
-                            </div>
-                        </a>
-
-                        <a href="">
-                            <div class="our-services-card ">
-                                <span>
-                                    <img src="./assets/images/ourServices/stock audit icon.svg" loading="lazy" width="20" />
-                                </span>
-                                <h4>Pharmaceutical Sector <i class="fa-regular fa-hand-point-right"></i></h4>
-                                <!-- <p>A rigorous examination and validation of inventory within the pharmaceutical industry, emphasizing precision, transparency, and adherence to stringent regulatory requirements. Our service is pivotal in identifying any discrepancies, thereby ensuring the integrity of stock records crucial for maintaining operational efficiency and compliance standards within the pharmaceutical sector.</p> -->
-                                <p>A rigorous examination and validation of inventory within the pharmaceutical industry, emphasizing precision, transparency, and adherence to stringent regulatory requirements. Our service is pivotal in identifying any discrepancies, thereby ensuring the integrity of stock...</p>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <div id="ImportExport" class="w-100 p-2 out-services-card-container ">
-
-                        <a href="">
-                            <div class="our-services-card ">
-                                <span>
-                                    <img src="./assets/images/ourServices/import export icon.svg" loading="lazy" width="20" />
-                                </span>
-                                <h4>Import-Export Code (IEC) <i class="fa-regular fa-hand-point-right"></i></h4>
-                                <p>Assistance in obtaining the Import-Export Code, a registration required for undertaking import and export activities, facilitating international trade transactions.</p>
-                            </div>
-                        </a>
-
-                        <a href="">
-                            <div class="our-services-card ">
-                                <span>
-                                    <img src="./assets/images/ourServices/import export icon.svg" loading="lazy" width="20" />
-                                </span>
-                                <h4>Certificate of Origin <i class="fa-regular fa-hand-point-right"></i></h4>
-                                <p>Facilitating the issuance of Certificates of Origin, an essential document in international trade to validate the origin of exported goods and benefit from preferential tariffs.</p>
-                            </div>
-                        </a>
-
-                        <a href="">
-                            <div class="our-services-card ">
-                                <span>
-                                    <img src="./assets/images/ourServices/import export icon.svg" loading="lazy" width="20" />
-                                </span>
-                                <h4>SAFTA Agreement <i class="fa-regular fa-hand-point-right"></i></h4>
-                                <p>SAFTA Agreement is a regional free trade agreement among South Asian Association for Regional Corporation (SAARC) countries, it includes members of eight major countries including India.</p>
-                            </div>
-                        </a>
-
-                        <a href="">
-                            <div class="our-services-card ">
-                                <span>
-                                    <img src="./assets/images/ourServices/import export icon.svg" loading="lazy" width="20" />
-                                </span>
-                                <h4>Coconut Board Registration <i class="fa-regular fa-hand-point-right"></i></h4>
-                                <p>Coconut board certificate is provided to the entities that deal with coconut commodities.</p>
-                            </div>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
+         <div class="container-fluid our-services-bg">
+             <div class="container pt-4 ">
+     
+                 <div class="row">
+                     <div class="d-flex align-items-center flex-column">
+                         <div class="ourServices-title">Our Services <div>
+                         </div></div>
+                     </div>
+                 </div>
+     
+                 <div class="row my-5">
+     
+                     <div class="col-12 col-md-4 d-flex justify-content-center align-items-center flex-column px-2">
+     
+                         <a href="#BusinessRegistration" class="our-service-list active"> 
+                             <span>
+                                 <img src="./assets/images/ourServices/business registration icon.svg" loading="lazy" width="25" />
+                             </span>
+                              Business Registration
+                         </a>
+     
+                         <a href="#TaxFiling" class="our-service-list">
+                             <span>
+                                 <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="25" />
+                             </span>
+                             Tax Filing
+                         </a>
+     
+                         <a href="#StockAudit" class="our-service-list">
+                             <span>
+                                 <img src="./assets/images/ourServices/stock audit icon.svg" loading="lazy" width="25" />
+                             </span>
+                             Stock Audit
+                         </a>
+     
+                         <a href="#ImportExport" class="our-service-list">
+                             <span>
+                                 <img src="./assets/images/ourServices/import export icon.svg" loading="lazy" width="25" />
+                             </span>
+                             Import Export
+                         </a>
+     
+                     </div>
+                     
+                     <div class="col-12 col-md overflow-hidden our-services-list-boxs">
+     
+                         <div id="BusinessRegistration" class="w-100 p-2 out-services-card-container out-services-card-container1 ">
+     
+                             <a href="">
+                                 <div class="our-services-card ">
+                                     <span>
+                                         <img src="./assets/images/ourServices/business registration icon.svg" loading="lazy" width="25" />
+                                     </span>
+                                     <h4>Startup Registration <i class="fa-regular fa-hand-point-right"></i></h4>
+                                     <p>Assistance and guidance in the registration process for startups, ensuring compliance with all legal requirements and facilitating a solid foundation for new businesses.</p>
+                                 </div>
+                             </a>
+     
+                             <a href="">
+                                 <div class="our-services-card ">
+                                     <span>
+                                         <img src="./assets/images/ourServices/business registration icon.svg" loading="lazy" width="25" />
+                                     </span>
+                                     <h4>Company Registration <i class="fa-regular fa-hand-point-right"></i></h4>
+                                     <p>Support in the process of registering a new company, including the necessary documentation and legal formalities to establish the company as a legally recognized entity.</p>
+                                 </div>
+                             </a>
+     
+                             <a href="">
+                                 <div class="our-services-card ">
+                                     <span>
+                                         <img src="./assets/images/ourServices/business registration icon.svg" loading="lazy" width="25" />
+                                     </span>
+                                     <h4>LLP Registration <i class="fa-regular fa-hand-point-right"></i></h4>
+                                     <p>Assistance in the registration of Limited Liability Partnerships (LLP), offering the benefits of a partnership with limited liability, and fulfilling all regulatory requirements.</p>
+                                 </div>
+                             </a>
+     
+                             <a href="">
+                                 <div class="our-services-card ">
+                                     <span>
+                                         <img src="./assets/images/ourServices/business registration icon.svg" loading="lazy" width="25" />
+                                     </span>
+                                     <h4>Udayam Registration <i class="fa-regular fa-hand-point-right"></i></h4>
+                                     <p> We provide end-to-end support for startups, guiding them through the registration process and ensuring compliance with all legal obligations. Our services are designed to help new businesses establish a solid legal and operational foundation.</p>
+                                 </div>
+                             </a>
+     
+                         </div>
+                         
+                         <div id="TaxFiling" class="w-100 p-2 out-services-card-container ">
+     
+                             <a href="">
+                                 <div class="our-services-card ">
+                                     <span>
+                                         <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="20" />
+                                     </span>
+                                     <h4>GST Registration <i class="fa-regular fa-hand-point-right"></i></h4>
+                                     <p>Helping businesses register for the Goods and Services Tax (GST) regime, ensuring compliance with GST laws and regulations and obtaining the necessary GST registration certificate.</p>
+                                 </div>
+                             </a>
+     
+                             <a href="">
+                                 <div class="our-services-card ">
+                                     <span>
+                                         <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="20" />
+                                     </span>
+                                     <h4>ITR Filing <i class="fa-regular fa-hand-point-right"></i></h4>
+                                     <p> Assisting individuals and businesses with the filing of their Income Tax Returns (ITR), ensuring proper disclosure of income, deductions, and tax payments to comply with tax laws.
+                                     </p>
+                                 </div>
+                             </a>
+     
+                             <a href="">
+                                 <div class="our-services-card ">
+                                     <span>
+                                         <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="20" />
+                                     </span>
+                                     <h4>GST Return Filing <i class="fa-regular fa-hand-point-right"></i></h4>
+                                     <p>Aiding businesses in filing regular returns under the GST law, ensuring accurate reporting of sales, purchases, and tax payments to the authorities.</p>
+                                 </div>
+                             </a>
+     
+                             <a href="">
+                                 <div class="our-services-card ">
+                                     <span>
+                                         <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="20" />
+                                     </span>
+                                     <h4>TDS Return Filing <i class="fa-regular fa-hand-point-right"></i></h4>
+                                     <p>Assisting with the filing of Tax Deducted at Source (TDS) returns, ensuring compliance with TDS regulations and accurate reporting of TDS deducted and paid.</p>
+                                 </div>
+                             </a>
+     
+                         </div>
+     
+                         <div id="StockAudit" class="w-100 p-2 out-services-card-container ">
+                            
+                             <a href="">
+                                 <div class="our-services-card ">
+                                     <span>
+                                         <img src="./assets/images/ourServices/stock audit icon.svg" loading="lazy" width="20" />
+                                     </span>
+                                     <h4>Manufacturing <i class="fa-regular fa-hand-point-right"></i></h4>
+                                     <p> A thorough examination and verification of a company's stock and inventory to ensure accuracy, transparency, and regulatory compliance, assisting in identifying discrepancies and maintaining proper stock records.</p>
+                                 </div>
+                             </a>
+     
+                             <a href="">
+                                 <div class="our-services-card ">
+                                     <span>
+                                         <img src="./assets/images/ourServices/stock audit icon.svg" loading="lazy" width="20" />
+                                     </span>
+                                     <h4>Textiel and Apparel <i class="fa-regular fa-hand-point-right"></i></h4>
+                                     <p>Our service ensures precision, transparency, and adherence to industry and regulatory standards in managing textile and apparel inventories. By conducting a thorough evaluation, we help detect inconsistencies and maintain accurate stock records...</p>
+                                     <!-- <p>Our service ensures precision, transparency, and adherence to industry and regulatory standards in managing textile and apparel inventories. By conducting a thorough evaluation, we help detect inconsistencies and maintain accurate stock records, enabling seamless operations and compliance.</p> -->
+                                 </div>
+                             </a>
+     
+                             <a href="">
+                                 <div class="our-services-card ">
+                                     <span>
+                                         <img src="./assets/images/ourServices/stock audit icon.svg" loading="lazy" width="20" />
+                                     </span>
+                                     <h4>Retail Shop <i class="fa-regular fa-hand-point-right"></i></h4>
+                                     <p>A meticulous review and authentication of a retail shop's inventory, focusing on accuracy, transparency, and compliance with industry regulations. Our service plays a vital role in pinpointing discrepancies and ensuring the maintenance of precise stock records...</p>
+                                     <!-- <p>A meticulous review and authentication of a retail shop's inventory, focusing on accuracy, transparency, and compliance with industry regulations. Our service plays a vital role in pinpointing discrepancies and ensuring the maintenance of precise stock records essential for efficient retail operations.</p> -->
+                                 </div>
+                             </a>
+     
+                             <a href="">
+                                 <div class="our-services-card ">
+                                     <span>
+                                         <img src="./assets/images/ourServices/stock audit icon.svg" loading="lazy" width="20" />
+                                     </span>
+                                     <h4>Pharmaceutical Sector <i class="fa-regular fa-hand-point-right"></i></h4>
+                                     <!-- <p>A rigorous examination and validation of inventory within the pharmaceutical industry, emphasizing precision, transparency, and adherence to stringent regulatory requirements. Our service is pivotal in identifying any discrepancies, thereby ensuring the integrity of stock records crucial for maintaining operational efficiency and compliance standards within the pharmaceutical sector.</p> -->
+                                     <p>A rigorous examination and validation of inventory within the pharmaceutical industry, emphasizing precision, transparency, and adherence to stringent regulatory requirements. Our service is pivotal in identifying any discrepancies, thereby ensuring the integrity of stock...</p>
+                                 </div>
+                             </a>
+     
+                         </div>
+     
+                         <div id="ImportExport" class="w-100 p-2 out-services-card-container ">
+     
+                             <a href="">
+                                 <div class="our-services-card ">
+                                     <span>
+                                         <img src="./assets/images/ourServices/import export icon.svg" loading="lazy" width="20" />
+                                     </span>
+                                     <h4>Import-Export Code (IEC) <i class="fa-regular fa-hand-point-right"></i></h4>
+                                     <p>Assistance in obtaining the Import-Export Code, a registration required for undertaking import and export activities, facilitating international trade transactions.</p>
+                                 </div>
+                             </a>
+     
+                             <a href="">
+                                 <div class="our-services-card ">
+                                     <span>
+                                         <img src="./assets/images/ourServices/import export icon.svg" loading="lazy" width="20" />
+                                     </span>
+                                     <h4>Certificate of Origin <i class="fa-regular fa-hand-point-right"></i></h4>
+                                     <p>Facilitating the issuance of Certificates of Origin, an essential document in international trade to validate the origin of exported goods and benefit from preferential tariffs.</p>
+                                 </div>
+                             </a>
+     
+                             <a href="">
+                                 <div class="our-services-card ">
+                                     <span>
+                                         <img src="./assets/images/ourServices/import export icon.svg" loading="lazy" width="20" />
+                                     </span>
+                                     <h4>SAFTA Agreement <i class="fa-regular fa-hand-point-right"></i></h4>
+                                     <p>SAFTA Agreement is a regional free trade agreement among South Asian Association for Regional Corporation (SAARC) countries, it includes members of eight major countries including India.</p>
+                                 </div>
+                             </a>
+     
+                             <a href="">
+                                 <div class="our-services-card ">
+                                     <span>
+                                         <img src="./assets/images/ourServices/import export icon.svg" loading="lazy" width="20" />
+                                     </span>
+                                     <h4>Coconut Board Registration <i class="fa-regular fa-hand-point-right"></i></h4>
+                                     <p>Coconut board certificate is provided to the entities that deal with coconut commodities.</p>
+                                 </div>
+                             </a>
+     
+                         </div>
+     
+                     </div>
+     
+                 </div>
+     
+             </div>
+         </div>
     
         <!-- Why Us -->
         <div class="container-fluid why-we">
