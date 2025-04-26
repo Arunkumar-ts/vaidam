@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaidam Consultancy | Support Solution For Every Business</title>
+    
+  <!-- Boostrap link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap" rel="stylesheet">
+  
+  <!-- Font awessome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+  <!-- vaidam nav link -->
+  <link rel="stylesheet" href="index-style.css">
+  <script src="index-script.js"></script>
+  
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+  <div class="body" id="toTop">
+
+    <!-- Navbar -->
+    <nav class="navbar container-fluid p-0 shadow bg-body-tertiary" id="navbar">
+
+      <!-- Nav -->
+      <div class="container ">
+
+          <img src="./assets/images/vaidam/logo1.png" alt="vaidam logo" class="img-fluid" width="190">
+
+          <div class="d-none d-md-flex navLinks ">
+
+              <ul>
+                  <li><a href="templates.html">Home</a></li>
+                  <li><a class="dropdown-toggle" onclick="servicesToggeleOn()">Services</a></li>
+                  <li><a href="">About Us</a></li>
+                  <li><a href="">Blog</a></li>
+                  <li><a href="">Contact Us</a></li>
+              </ul>
+
+          </div>
+          
+          <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+              <div class="offcanvas-header">
+                  <div class="offcanvas-title" id="offcanvasNavbarLabel" >
+                      <img src="./assets/images/vaidam/logo1.png" alt="vaidam logo" class="img-fluid" width="150">
+                  </div>
+                  <button type="button" class="btn-close me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+
+              <div class="offcanvas-body">
+
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                    <li class="nav-item nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                        <a class="offcanva-link" href="templates.html">Home</a>
+                    </li>
+                    
+                    <li class="nav-item nav-link dropdown-toggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                        <a class="offcanva-link" onclick="servicesToggeleOn()">Services</a>
+                    </li>
+
+                    <li class="nav-item nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                        <a class="offcanva-link">About Us</a>
+                    </li>
+
+                    <li class="nav-item nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                        <a class="offcanva-link">Blog</a>
+                    </li>
+
+                    <li class="nav-item nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >
+                        <a class="offcanva-link">Contact Us</a>
+                    </li>
+
+                </ul>
+
+              </div>
+
+          </div>
+                  
+      </div>
+       
+      <!-- Services -->
+      <div class="container bg-white shadow rounded services">
+
+          <div class="row pb-3">
+
+              <div class="col col-12 col-md m-3 mb-0 px-5 px-md-2 servicesList">
+
+                  <div class="servicesList-title">Business Setup</div>
+                  <hr>
+                  
+                  <div class="d-inline-flex servicesList-role d-flex flex-column">
+                      <a href="">Business Registration</a>
+                      <a href="">Sole Proprietorship</a>
+                      <a href="">Partnership Firm</a>
+                  </div>
+                  
+                  <div class="collapse" id="collapseExample1">
+                      <div class="servicesList-role d-flex flex-column">
+                          <a href="">Pvt Ltd Company</a>
+                          <a href="">Public  Limited</a>
+                          <a href="">OPC Registration</a>
+                          <a href="">LLP Registration</a>
+                          <a href="">Startup Registration</a>
+                          <a href="">Nidhi Company</a>
+                      </div>
+                  </div>
+
+                  <div class="servicesList-viewMoreTop">
+                      <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample" role="button">
+                          View More +
+                      </a>
+                  </div>
+
+                  <div class="d-inline-flex servicesList-role d-flex flex-column">
+                      <a href="">Business Setup</a>
+                      <a href="">Udaya Registration</a>
+                      <a href="">GST Registration</a>
+                  </div>
+                  
+                  <div class="collapse" id="collapseExample1.1">
+                      <div class="servicesList-role d-flex flex-column">
+                          <a href="">Professional Tax</a>
+                      </div>
+                  </div>
+
+                  <div class="servicesList-viewMoreTop">
+                      <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample1.1" aria-expanded="false" aria-controls="collapseExample" role="button">
+                          View More +
+                      </a>
+                  </div>
+                      
+              </div>
+
+              <div class="col col-12 col-md m-3 mb-0 px-5 px-md-2">
+
+                  <div class="servicesList-title">Compliances</div>
+                  <hr>
+
+                  <div class="d-inline-flex servicesList-role d-flex flex-column">
+                      <a href="">Secretarial Compliances</a>
+                      <a href="">Auditor Appointment</a>
+                      <a href="">Director Disqualification</a>
+                  </div>
+
+                  <div class="collapse" id="collapseExample2">
+                      <div class="servicesList-role d-flex flex-column">
+                          <a href="">Annual Return</a>
+                          <a href="">LLP Compliance</a>
+                          <a href="">Trust Compliance</a>
+                          <a href="">15CA 15CB Filing</a>
+                          <a href="">Form FC TRS</a>
+                          <a href="">LLP Form 11</a>
+                          <a href="">LLP Form 4</a>
+                          <a href="">LLP Form 8</a>
+                          <a href="">LLP Form 3</a>
+                          
+                      </div>
+                  </div>
+
+                  <div class="servicesList-viewMoreTop">
+                      <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample" role="button">
+                          View More +
+                      </a>
+                  </div>
+                      
+              </div>
+
+              <div class="col col-12 col-md m-3 mb-0 px-5 px-md-2">
+                  <div class="servicesList-title">Licenses</div>
+                  <hr>
+
+                  <div class="d-inline-flex servicesList-role d-flex flex-column">
+                      <a href="">FSSAI</a>
+                      <a href="">FSSAI Registration</a>
+                      <a href="">FSSAI State</a>
+                  </div>
+
+                  <div class="collapse" id="collapseExample3">
+                      <div class="servicesList-role d-flex flex-column">
+                          <a href="">FSSAI Cental</a>
+                          <a href="">FSSAI Renewable</a>
+                          <a href="">FSSAI Annual Return</a>
+                      </div>
+                  </div>
+
+                  <div class="servicesList-viewMoreTop">
+                      <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample" role="button">
+                          View More +
+                      </a>
+                  </div>
+                      
+                  <div class="servicesList-title">Tax</div>
+                  <hr>
+
+                  <div class="d-inline-flex servicesList-role d-flex flex-column">
+                      <a href="">TDA</a>
+                      <a href="">TDA on Dividend</a>
+                      <a href="">TDA on Salary</a>
+                  </div>
+
+                  <div class="collapse" id="collapseExample3.1">
+                      <div class="servicesList-role d-flex flex-column">
+                          <a href="">TDA Return Filling</a>
+                      </div>
+                  </div>
+
+                  <div class="servicesList-viewMoreTop">
+                      <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample3.1" aria-expanded="false" aria-controls="collapseExample" role="button">
+                          View More +
+                      </a>
+                  </div>
+
+              </div>
+
+              <div class="col col-12 col-md m-3 mb-0 px-5 px-md-2">
+                  <div class="servicesList-title">Certificates</div>
+                  <hr>
+
+                  <div class="d-inline-flex servicesList-role d-flex flex-column">
+                      <a href="">Government</a>
+                      <a href="">Make In India</a>
+                      <a href="">GeM Registration</a>
+                  </div>
+
+                  <div class="collapse" id="collapseExample4">
+                      <div class="servicesList-role d-flex flex-column">
+                          <a href="">Make In Indian Services</a>
+                          <a href="">EPR Registration</a>
+                      </div>
+                  </div>
+
+                  <div class="servicesList-viewMoreTop">
+                      <a class="servicesList-viewMore" onclick="viewToggle(event)" data-bs-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample" role="button">
+                          View More +
+                      </a>
+                  </div>
+                      
+              </div>
+
+          </div>
+
+          <div class="crossIcon" onclick="servicesToggeleOff()" >
+              <i class="fa-solid fa-xmark"></i>
+          </div>
+
+      </div>
+
+    </nav>
+
+    <!-- Templates -->
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-12 col-md-3 template-list">
+
+        </div>
+
+        <div class="col-12 col-md">
+
+            <div style="border:1px solid #ccc; padding:10px; margin:10px; border-radius:8px; max-width:400px;">
+                <p id="template1" style="margin:0;">
+                  Hey [Name], just checking in—let me know if you need anything!
+                </p>
+                <button onclick="copyToClipboard('template1')">Copy</button>
+            </div>
+
+        </div>
+      
+      </div>
+    </div>
+
+     <!-- Go to Top -->
+     <div>
+      <a href="#toTop" class="text-white goToTOP">
+          <i class="fa-solid fa-up-long"></i>
+      </a>
+    </div>
+
+  </div>
+</body>
+
+<script>
+// servicesToggele
+document.querySelector(".services").style.display="none";
+
+//copyToClipbord
+function copyToClipboard(elementId) {
+  const text = document.getElementById(elementId).innerText;
+}
+
+</script>
+
+</html>
