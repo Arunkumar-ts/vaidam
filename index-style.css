@@ -27,7 +27,7 @@
   border-bottom: 1px solid #555852;
 }
 .offcanvas-body {
-  background-image: url(./assets/images/background/bg7.jpg);
+  background-image: url(./assets/images/background/navbaroffcanvaBG.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -45,9 +45,14 @@
   list-style: none;
 }
 .navLinks > ul > li {
-  margin: 20px 0px 0px 20px;
-  font-weight: 500;
+  margin: 10px 0px 0px 10px;
   font-size: 20px;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+.navLinks > ul > li:hover{
+  background-color:#a7b698;
+  color: white;
 }
 .navLinks > ul > li > a {
   color: black;
@@ -61,6 +66,7 @@
 .offcanva-link{
   color: black;
   text-decoration: none;
+  font-weight: bold;
   font-size: 20px;
 }
 
@@ -121,11 +127,14 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  padding: 10px 13px;
+  padding: 8px 13px;
   border-radius: 50%;
-  background-color: #6d7a5f;
+  color: white;
+  background-color: #56614a;
   cursor: pointer;
+  font-size: 20px;
 }
 .goToTOP:hover {
   box-shadow: 0 0 10px #555f4a;
+  color: black;
 }

@@ -372,18 +372,18 @@
             <h3>GST Registration Msg</h3>
 
              <div class="template-box">
-                <h4>Intro Sheetal</h4>
+                <h4>Intro Arun</h4>
 
                 <div class="template-box-copytext shadow">
                     <p>
 Greetings of the Day!<br><br>
 
-I’m <strong>*Sheetal*</strong> and I’m delighted to assist you with the GST Registration.I’ll be a single point of contact and will ensure the seamless process.<br><br>
+I’m <strong>*Arun*</strong> and I’m delighted to assist you with the GST Registration.I’ll be a single point of contact and will ensure the seamless process.<br><br>
 
 Looking forward to working with you. <br><br>
 
 Regards, <br>
-Sheetal <br>
+Arun <br>
 Team Vaidam <br> 
 Your Business, Our Focus <br>
                     </p>
@@ -392,18 +392,18 @@ Your Business, Our Focus <br>
              </div>
 
              <div class="template-box">
-                <h4>Intro Ruchika</h4>
+                <h4>Intro Mukul</h4>
 
                 <div class="template-box-copytext shadow">
                     <p >
 Greetings of the Day!<br><br>
 
-I’m <strong>*Ruchika*</strong> and I’m delighted to assist you with the GST Registration.I’ll be a single point of contact and will ensure the seamless process.<br><br>
+I’m <strong>*Mukul*</strong> and I’m delighted to assist you with the GST Registration.I’ll be a single point of contact and will ensure the seamless process.<br><br>
 
 Looking forward to working with you. <br><br>
 
 Ruchika, <br>
-Sheetal <br>
+Mukul <br>
 Team Vaidam <br> 
 Your Business, Our Focus <br>
                     </p>
@@ -481,7 +481,7 @@ Your Business, Our Focus <br>
 
      <!-- Go to Top -->
      <div>
-      <a href="#toTop" class="text-white goToTOP">
+      <a href="#toTop" class="goToTOP">
           <i class="fa-solid fa-up-long"></i>
       </a>
     </div>
@@ -498,11 +498,15 @@ function copyToClipboard(event) {
     const btn = event.target;
     const div = btn.closest("div");
     const p = div?.querySelector("p");
+    
     navigator.clipboard.writeText(p.textContent).then(()=>{
         Swal.fire({
         title: "Success!",
-        text: "Template is Coped!",
-        icon: "success"
+        text: "Template is Copied!",
+        icon: "success",
+        showConfirmButton: false,
+        timer: 1000,
+        timerProgressBar: true 
         });
     })
 }
