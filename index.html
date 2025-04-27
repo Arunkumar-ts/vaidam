@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaidam Consultancy | Support Solution For Every Business</title>
+
+    <!-- our logo on browser -->
+    <link rel="icon" type="image/png" href="./assets/images/vaidam/vaidam v logo.png">
     
     <!-- Boostrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
@@ -31,10 +34,11 @@
 
         /* home */
         .home{
-            /* background-image: url(./assets/images/background/bg7.jpg);
+            background-image: url(./assets/images/background/navbaroffcanvaBG.jpg);
             background-size: cover;
-            background-repeat: no-repeat; */
-            background-color: #b6c2a9;
+            background-repeat: no-repeat;
+            /* background-color: #b6c2a9; */
+            border-bottom: 1px solid #b4b2b2;
         }
         .home-title{
             font-size: 40px;
@@ -43,8 +47,8 @@
         }
         .home-title-bar{
             background-color:black;
-            border-radius: 5px;
-            width: 20%;
+            border-radius: 50% 5% 50% 5%;
+            width: 30%;
             height: 8px;
             margin: 10px 0px;
         }
@@ -58,7 +62,7 @@
             cursor: pointer;
             padding: 5px 10px ;
             background-color:#b1c0a1;
-            border: 2px solid blue;
+            border: 2px solid var(--secondary-color);
             border-radius: 15px 1px 15px 1px;
             margin-top: 20px;
             margin-bottom: 10px;
@@ -121,6 +125,8 @@
          background-size: cover;
          background-position: center;
         border: 1px solid transparent;
+        border-bottom: 1px solid #b4b2b2;
+
         }
         .ourServices-title{
             color: var(--main-color);
@@ -129,8 +135,8 @@
         }
         .ourServices-title > div{
             background-color:var(--main-color);
-            border-radius: 5px;
-            width: 30%;
+            border-radius: 50% 5% 50% 5%;
+            width: 40%;
             height: 7px;
             margin: auto;
         }
@@ -222,16 +228,21 @@
     
         /* Why Us */
         .why-we{
-            background-color: #b6c2a9;
+            background-image: url(./assets/images/background/homeBG1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-bottom: 1px solid #919191;
+
         }
         .why-we-content>h2{
             font-size: 40px;
-            font-weight: 600;
+            font-weight: bold;
+            margin-top: 30px;
         }
         .why-we-content > .bar{
             background-color:black;
-            border-radius: 5px;
-            width: 20%;
+            border-radius: 50% 5% 50% 5%;
+            width: 30%;
             height: 10px;
             margin: 10px 0px;
         }
@@ -241,6 +252,7 @@
         }
         .why-we-content>ul{
             list-style: none;
+            padding: 0px 10px; 
         }
         .why-we-content>ul>li{
             display: flex;
@@ -249,11 +261,11 @@
             font-size: 20px;
             font-weight: bold;
             margin: 15px 0px;
-            color: white;
+            color: black;
         }
         .why-we-content>ul>li>span>i{
             font-size: 30px;
-            color: black;
+            color:#3d4b2f;
         }
 
     </style>
@@ -565,19 +577,19 @@
                               Business Registration
                          </a>
      
-                         <a href="#TaxFiling" class="our-service-list">
-                             <span>
-                                 <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="25" />
-                             </span>
-                             Tax Filing
-                         </a>
-     
                          <a href="#StockAudit" class="our-service-list">
                              <span>
                                  <img src="./assets/images/ourServices/stock audit icon.svg" loading="lazy" width="25" />
                              </span>
                              Stock Audit
                          </a>
+
+                         <a href="#TaxFiling" class="our-service-list">
+                            <span>
+                                <img src="./assets/images/ourServices/tax filing icon.svg" loading="lazy" width="25" />
+                            </span>
+                            Tax Filing
+                        </a>
      
                          <a href="#ImportExport" class="our-service-list">
                              <span>
@@ -787,11 +799,10 @@
                     <img src="./assets/images/why we/why-we-img.png" alt="why choose Vaidam Consultancy" loading="lazy" width="77%" />
                 </div>
 
-                <div class="col-12 col-md why-we-content d-flex flex-column  justify-content-center">
-                    <h2>Why Choose Vaidam Consultancy?</h2>
+                <div class="col-12 col-md why-we-content d-flex flex-column justify-content-center">
+                    <h2>Why Partner with Vaidam Consultancy?</h2>
                     <div class="bar"></div>
-                    <p>At Vaidam Consultancy, we are incredibly proud to be India's leading platform for all your accounting, registration and compliance needs. We cater from startups to large business houses, aiming to be unmatched leaders in delivering exceptional services.
-                    </p>
+                    <p>At Vaidam Consultancy, we are India’s leading platform for accounting, registration, and compliance services. Serving businesses of all sizes, from startups to large enterprises, we provide tailored solutions focused on excellence, innovation, and client success.</p>
                     <ul>
                         <li><span><i class="fa-sharp fa-solid fa-circle-check"></i></span> Trusted by startups to enterprises</li>
                         <li><span><i class="fa-sharp fa-solid fa-circle-check"></i></span> Strategic collaborations & growth</li>
@@ -803,6 +814,49 @@
 
             </div>
 
+        </div>
+
+        <!-- Footer -->
+        <div class="container-fluid footer">
+            <div class="row py-5">
+                <div class="col-12 col-md-4 px-3">
+                    <div class="d-flex flex-column align-items-start justify-content-center logo">
+                        <img src="./assets/images/vaidam/logo1.png" alt="vaidam logo" width="200">
+                        <div class="bar mb-4 ms-5"></div>
+
+                        <p>Support solutions for every business.
+                            Strategic Focus, Measurable Results.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md links px-3">
+                    <h2 class="mt-4 mt-md-3">LINKS</h2>
+                    <div class="bar"></div>
+                    <div class="link">
+                        <a href="">Home</a>
+                        <a href="">Services</a>
+                        <a href="">About Us</a>
+                        <a href="">Blog</a>
+                        <a href="">Contact Us</a>
+                        <a href="">Employee Login</a>
+
+                    </div>
+
+                </div>
+                <div class="col-12 col-md contact-us px-3">
+                    <h2 class="mt-4 mt-md-3">CONTACT US</h2>
+                    <div class="bar"></div>
+                    <div>
+                        <div class="email"><span><i class="fa-solid fa-envelope"></i></span>   vaidamconsultancy@gmail.com</div>
+                        <div class="phone-no"><span><i class="fa-solid fa-phone"></i></span>  +91 9105627344</div>
+                    </div>
+                    <div class="crt-blog-btn shadow">Create New Blog Post</div>
+                </div>
+            </div>
+            <div class="row copyright">
+                <div>
+                    © 2025 Copyright: <a href="https://vaidamconsultancy.com">Vaidam Consultancy</a>. All rights reserved.
+                </div>
+            </div>
         </div>
 
         <!-- Go to Top -->
