@@ -3,7 +3,6 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "Special Gothic", sans-serif;
-  overflow-x: hidden;
 }
 .body {
   position: relative;
@@ -142,7 +141,7 @@ background-color: #a7b698;
   margin: 10px 0px;
 }
 .footer .links, .footer .contact-us{
-  margin-left: 25px;
+  padding-left: 50px;
 }
 .footer .links h2, .footer .contact-us h2{
   font-size: 22px;  
@@ -213,7 +212,7 @@ background-color: #a7b698;
 }
 
 /* go to Top */
-.goToTOP {
+/* .goToTOP {
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -227,4 +226,4 @@ background-color: #a7b698;
 .goToTOP:hover {
   box-shadow: 0 0 10px #555f4a;
   color: black;
-}
+} */
