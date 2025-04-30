@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['blog-user'])) {
+    header("Location: blog-login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +13,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vaidam Consultancy | Support Solution For Every Business</title>
   
-    <!-- our logo on browser -->
-    <link rel="icon" type="image/png" href="./assets/images/vaidam/vaidam v logo.png">
+<!-- our logo on browser -->
+<link rel="icon" type="image/png" href="./assets/images/vaidam/vaidam v logo.png">
     
   <!-- Boostrap link -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
@@ -27,100 +35,39 @@
   <link rel="stylesheet" href="index-style.css">
   <script src="index-script.js"></script>
   
-  <style>
-    /* templates-list */
-    .template-list{
-        background-color:  #829271;
-        /* height: 87vh; */
-        border-radius: 0px 17% 0px 0px;
+<style>
+    .employee-login .login{
+        background-color: #a7b698;
+        border: 1px solid #7a7373;
     }
-    .template-list .template-links{
-        list-style: none;
-        margin-top: 10px;
-    }
-    .template-list h2{
-        margin-top: 25px;
+    .employee-login .login .login-title h2{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 35px;
         font-weight: bold;
-        margin-left: 10px;
-        color: white;
-    }
-    .template-list .template-links div{
-        font-size: 20px;
-        background-color: #6d7a5f;
-        margin: 10px 0px;
-        padding: 10px;
-        width: 90%;
-        color: white;
-        border-radius: 1px 10px 1px 10px;
-        cursor: pointer;
-    }
-
-    .template-list .template-links div:nth-child(1){
-        margin-top: 30px;
-    }
-    /* .template-boxs {
-        overflow-y: scroll;
-        height: 87vh;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        @media (max-width:500px) {
-            overflow: auto;
-            height: auto;
-
-        } 
-    } */
-    .mobile-list h2{
         text-align: center;
-        font-size: 30px;
-        margin-top: 20px;
-        font-weight: bold;
-    }
-    .mobile-list .template-links{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-    }
-    .mobile-list .template-links div{
-        padding: 10px;
-        margin: 5px;
-        border-radius: 5px 5px 5px 10px;
-        background-color: #6d7a5f;
         color: white;
     }
-    .template-boxs h3{
-        margin-top: 20px;
+    .login-input{
+        box-shadow: none !important;
+        border: 1px solid #8d9b7e !important;
+    }
+    .login-btn{
         font-weight: bold;
+        padding: 5px 20px ;
+        color: #819170;
+        font-size: 18px;
+        /* background-color: #99ad82; */
+        border: 1px solid #7a7373;
+        background-color: rgba(255, 255, 255, 0.945);
+        border-radius: 5px;
+        outline: none;
     }
-    .template-box{
-        margin: 20px 0px;
-        padding: 10px;
+    .login-btn:hover{
+        border: 1px solid #657455;
     }
-   .template-box h4{
-    font-weight: bold;
-   }
-   .template-box-copytext{
-    border:1px solid #888; 
-    background-color: #f3f1f1;
-    padding:10px; 
-    border-radius:8px; 
-    margin-top: 10px;
-    border-radius: 1px 15px 15px 15px;
 
-   }
-   .copy-btn{
-    cursor: pointer;
-    padding: 5px 10px ;
-    background-color:#b1c0a1;
-    border: 1px solid #555852;
-    border-radius: 1px 5px 5px 5px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 10px;
-    transition: all .3s linear;
-   }
 
-  </style>
+</style>
 
 </head>
 
@@ -361,168 +308,9 @@
 
     </nav>
 
-    <!-- Templates -->
-    <div class="container-fluid ">
-      <div class="row">
-
-        <div class="col-12 col-md-3 template-list shadow d-none d-md-block">
-            <h2>Important Links</h2>
-
-            <div class="template-links">
-                <div>
-                    <a>Stamp Duty Calculator</a>
-                </div>
-                <div>
-                    <a>Payment Sheet</a>
-                </div>
-                <div>
-                    <a>GST Message</a>
-                </div>
-                <div>
-                    <a>Post Incorporation</a>
-                </div>
-                <div>
-                    <a>Training Video</a>
-                </div>
-            </div>
-            
-
-        </div>
-
-        <div class="col-12 mb-2 d-flex flex-column d-md-none mobile-list">
-            <h2>Important Links</h2>
-
-            <div class="template-links">
-                <div>
-                    <a>Stamp Duty Calculator</a>
-                </div>
-                <div>
-                    <a>Payment Sheet</a>
-                </div>
-                <div>
-                    <a>GST Message</a>
-                </div>
-                <div>
-                    <a>Post Incorporation</a>
-                </div>
-                <div>
-                    <a>Training Video</a>
-                </div>
-            </div>
-            
-
-        </div>
-
-        <div class="col-12 col-md template-boxs">
-
-            <h3>GST Registration Msg</h3>
-
-             <div class="template-box">
-                <h4>Intro Arun</h4>
-
-                <div class="template-box-copytext shadow">
-                    <p>
-Greetings of the Day!<br><br>
-
-I’m <strong>*Arun*</strong> and I’m delighted to assist you with the GST Registration.I’ll be a single point of contact and will ensure the seamless process.<br><br>
-
-Looking forward to working with you. <br><br>
-
-Regards, <br>
-Arun <br>
-Team Vaidam <br> 
-Your Business, Our Focus <br>
-                    </p>
-                    <button class="copy-btn shadow" onclick="copyToClipboard(event)">Copy Text</button>
-                </div>
-             </div>
-
-             <div class="template-box">
-                <h4>Intro Mukul</h4>
-
-                <div class="template-box-copytext shadow">
-                    <p >
-Greetings of the Day!<br><br>
-
-I’m <strong>*Mukul*</strong> and I’m delighted to assist you with the GST Registration.I’ll be a single point of contact and will ensure the seamless process.<br><br>
-
-Looking forward to working with you. <br><br>
-
-Ruchika, <br>
-Mukul <br>
-Team Vaidam <br> 
-Your Business, Our Focus <br>
-                    </p>
-                    <button class="copy-btn shadow" onclick="copyToClipboard(event)">Copy Text</button>
-                </div>
-             </div>
-
-             <div class="template-box">
-                <h4>Docs-Proprietorship</h4>
-
-                <div class="template-box-copytext shadow">
-                    <p>
-Greetings of the Day!<br><br>
-
-It is our endeavour to complete GST Registration on time, we request you to share all information mentioned in the checklist latest by tomorrow. We will file an application in 2 working days after documents are completely received . <br><br>
-
-1) Pan Card of Proprietor <br>
-2) Aadhar card of Proprietor<br>
-3) <strong>*Email ID and Mobile Number*</strong> of the Proprietor<br>
-4) <strong>*Passport Size Photograph*</strong> of the Proprietor<br>
-5) Rented Property - Commercial Stamped and Notarised Rent Agreement With 2 Witnesses details (If Business Property is Rented and Address Should Be same on Electricity Bill and Rent Agreement)<br>
-6) Latest Electricity Bill of the Property(Not older than one month)<br>
-7) Property Tax Receipt/Sale Deed having property address<br>
-8) Pan and Aadhaar of Property Owner<br>
-9) One Id Proof ( Aadhar/PAN)of Both Witnesses.<br>
-10) NOC/ Consent letter signed from owner ( Format of NOC we will Draft and share )<br>
-11) <strong>*Trade Name and Details of Goods and Services ( 2-3 lines)*</strong><br>
-12) Geotag Photo of Business premises (in case of clarification)<br><br>
-
-With Regard, <br>
-Team Vaidam <br> 
-Your Business, Our Focus <br>
-                    </p>
-                    <button class="copy-btn shadow" onclick="copyToClipboard(event)">Copy Text</button>
-                </div>
-             </div>
-
-             <div class="template-box">
-                <h4>Docs-Partnership</h4>
-
-                <div class="template-box-copytext shadow">
-                    <p>
-Greetings of the Day!<br><br>
-
-It is our endeavour to complete GST Registration on time, we request you to share all information mentioned in the checklist latest by tomorrow. We will file an application in 2 working days after documents are completely received<br><br>
-
-1. Pan Card of all Partners<br>
-2. Aadhar card of all Partners<br>
-3. <strong>*Email ID and Mobile Number*</strong> of all Partners<br>
-4. <strong>*Passport Size Photograph*</strong> of all Partners<br>
-5. Partnership deed Stamped and Notarised<br>
-6. PAN Card of Partnership Firm<br>
-7. Name of Authorised Partner for GST<br>
-8. Rented Property - Commercial Stamped and Notarised Rent Agreement With 2 Witnesses details (If Business Property is Rented and Address Should Be same on Electricity Bill and Rent Agreement)<br>
-9. Latest Electricity Bill of the Property(Not older than one month)<br>
-10. Property Tax Receipt/Sale Deed having property address<br>
-11. Pan and Aadhaar of the Property Owner<br>
-12. One Id Proof ( Aadhar/PAN)of Both Witnesses.<br>
-13. NOC signed from owner ( Format of NOC we will Draft and share )<br>
-14. <strong>*Trade Name and Details of Goods and Services ( 2-3 lines)*</strong><br>
-15. Geotag Photo of Business premises (in case of clarification)<br><br>
-
-With Regard, <br>
-Team Vaidam <br> 
-Your Business, Our Focus <br>
-                    </p>
-                    <button class="copy-btn shadow" onclick="copyToClipboard(event)">Copy Text</button>
-                </div>
-             </div>
-
-        </div>
-      
-      </div>
+    <!-- create-blog -->
+    <div class="container">
+        <h1>create blog</h1>
     </div>
 
     <!-- Footer -->
@@ -549,7 +337,7 @@ Your Business, Our Focus <br>
                     <a href="">About Us</a>
                     <a href="">Blog</a>
                     <a href="">Contact Us</a>
-                    <a href="employee-login.html">Employee Login</a>
+                    <a href="./backend/logout.php">Logout</a>
 
                 </div>
 
@@ -562,7 +350,7 @@ Your Business, Our Focus <br>
                     <div class="email"><span><i class="fa-solid fa-envelope"></i></span>   vaidamconsultancy@gmail.com</div>
                     <div class="phone-no"><span><i class="fa-solid fa-phone"></i></span>  +91 9105627344</div>
                 </div>
-                <div class="crt-blog-btn shadow">Create New Blog Post</div>
+                <!-- <div class="crt-blog-btn shadow">Create New Blog Post</div> -->
             </div>
 
         </div>
@@ -577,30 +365,10 @@ Your Business, Our Focus <br>
 
   </div>
 </body>
-
 <script>
-// servicesToggele
-document.querySelector(".services").style.display="none";
 
-//copyToClipbord
-function copyToClipboard(event) {
-    const btn = event.target;
-    const div = btn.closest("div");
-    const p = div?.querySelector("p");
-    
-    navigator.clipboard.writeText(p.textContent).then(()=>{
-        Swal.fire({
-        title: "Success!",
-        text: "Template is Copied!",
-        icon: "success",
-        showConfirmButton: false,
-        timer: 1000,
-        timerProgressBar: true 
-        });
-    })
-}
-
+    // servicesToggele
+    document.querySelector(".services").style.display="none";
 
 </script>
-
 </html>

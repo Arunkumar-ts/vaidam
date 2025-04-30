@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['blog-user'])) {
+    header("Location: create-blog.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,6 +38,7 @@
 <style>
     .employee-login .login{
         background-color: #a7b698;
+        border: 1px solid #7a7373;
     }
     .employee-login .login .login-title h2{
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -48,8 +57,8 @@
         color: #819170;
         font-size: 18px;
         /* background-color: #99ad82; */
+        border: 1px solid #7a7373;
         background-color: rgba(255, 255, 255, 0.945);
-        border: none;
         border-radius: 5px;
         outline: none;
     }
@@ -299,17 +308,17 @@
 
     </nav>
 
-    <!-- Employee-login -->
+    <!-- blog-login -->
     <div class="container employee-login ">
         <div class="row justify-content-center my-5 mx-2 ">
             
             <div class="col-12 col-md-6 col-lg-5 shadow p-4 rounded my-4 login">
 
                 <div class="login-title">
-                    <h2>LOGIN</h2>
+                    <h2>BLOG - LOGIN</h2>
                 </div>
 
-                <form class="d-flex flex-column gap-4" onsubmit="login(event)">
+                <form class="d-flex flex-column gap-4" onsubmit="formSubmit(event)">
                     
                     <div class="form-group">
                         <label for="exampleInputEmail1" class="text-white">Email address</label>
@@ -318,7 +327,7 @@
                             class="form-control login-input"
                             placeholder="Username"
                             id="exampleInputEmail1"
-                            name="email"
+                            required
                         />
                     </div>
     
@@ -329,7 +338,7 @@
                             class="form-control login-input"
                             placeholder="Password"
                             id="exampleInputPassword1"
-                            name="password"
+                            required
                         />
                     </div>
     
@@ -370,9 +379,9 @@
                     <a href="index.html">Home</a>
                     <a href="">Services</a>
                     <a href="">About Us</a>
-                    <a href="templates.html">Blog</a>
+                    <a href="">Blog</a>
                     <a href="">Contact Us</a>
-                    <a href="employee-login.html">Employee Login</a>
+                    <a href="employee-login.php">Employee Login</a>
 
                 </div>
 
@@ -385,7 +394,7 @@
                     <div class="email"><span><i class="fa-solid fa-envelope"></i></span>   vaidamconsultancy@gmail.com</div>
                     <div class="phone-no"><span><i class="fa-solid fa-phone"></i></span>  +91 9105627344</div>
                 </div>
-                <div class="crt-blog-btn shadow">Create New Blog Post</div>
+                <!-- <div class="crt-blog-btn shadow">Create New Blog Post</div> -->
             </div>
 
         </div>
@@ -400,19 +409,63 @@
 
   </div>
 </body>
-
 <script>
 
-// servicesToggele
-document.querySelector(".services").style.display="none";
+    // servicesToggele
+    document.querySelector(".services").style.display="none";
 
-// login
-function login(event){
-    event.preventDefault();
-    console.log(event.target);
-    
-}
+    // formSubmit
+    async function formSubmit(e) {
+
+            e.preventDefault();
+            const email = document.getElementById('exampleInputEmail1').value;
+            const password = document.getElementById('exampleInputPassword1').value;
+        
+        try{
+            const responce = await fetch("./backend/blog-login.php", 
+            {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+            
+            const data = await responce.json();
+            console.log(data);
+            
+
+            if (data.success) {
+                Swal.fire({
+                title: "Login successful!",
+                icon: "success",
+                showConfirmButton: false,
+                timer: 900,
+                timerProgressBar: true 
+                });
+                setTimeout(()=>{
+                    window.location.href = 'create-blog.php'; 
+                },920);
+
+            } else {
+                Swal.fire({
+                icon: 'error',
+                title: 'Login Failed',
+                text:data.message || 'Invalid email or password!',
+                showConfirmButton: false,
+                timer: 1000,
+                timerProgressBar: true 
+                });
+            }
+
+        }
+        catch(e){
+            console.log('Error fetching users:', e.message)
+        }
+        finally{
+            document.getElementById('exampleInputEmail1').value="";
+            document.getElementById('exampleInputPassword1').value="";
+        }
+       
+    }
 
 </script>
-
 </html>

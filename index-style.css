@@ -10,7 +10,7 @@
 
 /* navbar */
 .navbar {
-    user-select: none;
+  user-select: none;
   position: sticky;
   top: 0px;
   z-index: 100;
@@ -50,8 +50,8 @@
   padding: 1px 4px;
   border-radius: 20px;
 }
-.navLinks > ul > li:hover{
-  background-color:#a7b698;
+.navLinks > ul > li:hover {
+  background-color: #a7b698;
   color: white;
 }
 .navLinks > ul > li > a {
@@ -63,7 +63,7 @@
 .navLinks > ul > li > a:hover {
   color: white;
 }
-.offcanva-link{
+.offcanva-link {
   color: black;
   text-decoration: none;
   font-weight: bold;
@@ -123,107 +123,95 @@
 }
 
 /* Footer */
-.footer{
-background-color: #a7b698;
+.footer {
+  background-color: #a7b698;
 }
-.footer p{
+.footer p {
   font-size: 20px;
   font-weight: bold;
   color: rgb(12, 46, 70);
   margin-left: 25px;
   width: 70%;
 }
-.footer .bar{
-  background-color:white;
+.footer .bar {
+  background-color: white;
   border-radius: 50% 5% 50% 5%;
   width: 25%;
   height: 5px;
   margin: 10px 0px;
 }
-.footer .links, .footer .contact-us{
+.footer .links,
+.footer .contact-us {
   padding-left: 50px;
 }
-.footer .links h2, .footer .contact-us h2{
-  font-size: 22px;  
+.footer .links h2,
+.footer .contact-us h2 {
+  font-size: 22px;
   font-weight: bold;
   color: black;
 }
-.footer .links .bar, .footer .contact-us .bar{
-  background-color:white;
+.footer .links .bar,
+.footer .contact-us .bar {
+  background-color: white;
   border-radius: 50% 5% 50% 5%;
   width: 10%;
   height: 5px;
   margin: 10px 0px;
 }
-.footer .links .link{
+.footer .links .link {
   display: flex;
   flex-direction: column;
 }
-.footer .links .link a{
+.footer .links .link a {
   color: rgb(12, 46, 70);
   margin: 4px 0px;
   font-weight: bold;
   font-size: 18px;
   text-decoration: none;
 }
-.footer .links .link a:hover{
-  text-decoration: underline ;
+.footer .links .link a:hover {
+  text-decoration: underline;
 }
-.footer .contact-us .email, .phone-no{
+.footer .contact-us .email,
+.phone-no {
   font-weight: bold;
   font-size: 18px;
   color: rgb(12, 46, 70);
   margin: 15px 0px;
   user-select: none;
 }
-.footer .contact-us .email i, .phone-no i{
+.footer .contact-us .email i,
+.phone-no i {
   color: black;
   margin-right: 5px;
 }
-.footer .contact-us .crt-blog-btn{
-  width:fit-content;
+.footer .contact-us .crt-blog-btn {
+  width: fit-content;
   margin-top: 20px;
   cursor: pointer;
-  padding: 5px 10px ;
-  background-color:#82946e;
+  padding: 5px 10px;
+  background-color: #82946e;
   border: 2px solid var(--secondary-color);
   border-radius: 15px 1px 15px 1px;
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: bold;
   color: rgb(12, 46, 70);
-  transition: all .3s linear;
-}
-.footer .contact-us .crt-blog-btn:hover{
+  transition: all 0.3s linear;
+  text-decoration: none;
+} 
+.footer .contact-us .crt-blog-btn:hover {
   color: white;
 }
-.footer .copyright{
+.footer .copyright {
   background-color: #51613f;
-
 }
-.footer .copyright div{
+.footer .copyright div {
   padding: 15px;
   font-size: 18px;
   color: white;
   text-align: center;
 }
-.footer .copyright div a{
+.footer .copyright div a {
   text-decoration: none;
 }
-
-/* go to Top */
-/* .goToTOP {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  padding: 8px 13px;
-  border-radius: 50%;
-  color: white;
-  background-color: #56614a;
-  cursor: pointer;
-  font-size: 20px;
-}
-.goToTOP:hover {
-  box-shadow: 0 0 10px #555f4a;
-  color: black;
-} */
